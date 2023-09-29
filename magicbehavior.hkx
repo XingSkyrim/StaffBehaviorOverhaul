@@ -28476,6 +28476,51 @@
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
 
+		<hkobject name="#9725" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">spBoneWeight</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">6</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_CHARACTER_PROPERTY</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9726" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">spBoneWeight</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">0</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_CHARACTER_PROPERTY</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		
 		<hkobject name="#0786" class="BSBoneSwitchGeneratorBoneData" signature="0xc1215be6">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -28490,6 +28535,26 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">#9785</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="pGenerator">#0088</hkparam>
+			<hkparam name="spBoneWeight">#9784</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9286" class="BSBoneSwitchGeneratorBoneData" signature="0xc1215be6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#9725</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="pGenerator">#0088</hkparam>
+			<hkparam name="spBoneWeight">#9784</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9287" class="BSBoneSwitchGeneratorBoneData" signature="0xc1215be6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#9726</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="pGenerator">#0088</hkparam>
@@ -32210,6 +32275,107 @@
 			</hkparam>
 		</hkobject>
 		
+		<hkobject name="#9524" class="BSBoneSwitchGenerator" signature="0xf33d3eea">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StaffCastRightMove_BoneSwitchGen</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="pDefaultGenerator">#0922</hkparam>
+			<hkparam name="ChildrenA" numelements="1">
+				#9286
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9525" class="BSBoneSwitchGenerator" signature="0xf33d3eea">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StaffCastLeftMove_BoneSwitchGen</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="pDefaultGenerator">#0922</hkparam>
+			<hkparam name="ChildrenA" numelements="1">
+				#9287
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9710" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#0622</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">StfMovingCast_Blend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">-1.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
+			<hkparam name="flags">16</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="3">
+				#9711 #9712 #9713
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9711" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#9525</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">-1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9712" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#9923</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">0.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9713" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#9524</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0924" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -32315,7 +32481,7 @@
 			<hkparam name="enterNotifyEvents">#0925</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#9924</hkparam>
-			<hkparam name="generator">#9923</hkparam>
+			<hkparam name="generator">#9710</hkparam>
 			<hkparam name="name">StaffCastingLocomotionState</hkparam>
 			<hkparam name="stateId">1</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
@@ -49257,7 +49423,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="4">
-				#6060 #5530 #5532 #5534 
+				#6060 #6060 #6060 #6060 
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
@@ -49306,7 +49472,7 @@
 		<hkobject name="#6061" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="3">
 				<hkobject>
 					<hkparam name="localTime">-0.166666</hkparam>
 					<hkparam name="event">
@@ -49331,7 +49497,25 @@
 					<hkparam name="acyclic">false</hkparam>
 					<hkparam name="isAnnotation">false</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#4773</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
 			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#4773" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreRemoveArt</hkparam>
 		</hkobject>
 		
 		
@@ -50922,12 +51106,22 @@
 		<hkobject name="#5624" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="1">
+			<hkparam name="events" numelements="2">
 				<hkobject>
 					<hkparam name="id">249</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#5427</hkparam>
+				</hkobject>
 			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5427" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreOffImpact</hkparam>
 		</hkobject>
 		
 		<hkobject name="#6022" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
@@ -51124,10 +51318,14 @@
 		<hkobject name="#5424" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="1">
+			<hkparam name="events" numelements="2">
 				<hkobject>
 					<hkparam name="id">271</hkparam>
 					<hkparam name="payload">#5425</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#5426</hkparam>
 				</hkobject>
 			</hkparam>
 		</hkobject>
@@ -51136,6 +51334,12 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="data">@SGVI|iMagStorePoint|1</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5426" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreImpact</hkparam>
 		</hkobject>
 		
 		<hkobject name="#6023" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
@@ -51275,7 +51479,7 @@
 		<hkobject name="#5527" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="3">
 				<hkobject>
 					<hkparam name="localTime">0.000000</hkparam>
 					<hkparam name="event">
@@ -51285,6 +51489,18 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#4738</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
 					<hkparam name="acyclic">false</hkparam>
 					<hkparam name="isAnnotation">false</hkparam>
 				</hkobject>
@@ -51307,6 +51523,12 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="data">@SGVI|iStoreAttribute|0</hkparam>
+		</hkobject>
+		
+		<hkobject name="#4738" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreDefault1</hkparam>
 		</hkobject>
 		
 		<hkobject name="#5528" class="hkbClipGenerator" signature="0x333b85b9">
@@ -51352,7 +51574,7 @@
 		<hkobject name="#4729" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="3">
 				<hkobject>
 					<hkparam name="localTime">0.000000</hkparam>
 					<hkparam name="event">
@@ -51362,6 +51584,18 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#4370</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
 					<hkparam name="acyclic">false</hkparam>
 					<hkparam name="isAnnotation">false</hkparam>
 				</hkobject>
@@ -51384,6 +51618,12 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="data">@SGVI|iStoreAttribute|1</hkparam>
+		</hkobject>
+		
+		<hkobject name="#4370" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreFire1</hkparam>
 		</hkobject>
 		
 		<hkobject name="#4728" class="hkbClipGenerator" signature="0x333b85b9">
@@ -51429,7 +51669,7 @@
 		<hkobject name="#4732" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="3">
 				<hkobject>
 					<hkparam name="localTime">0.000000</hkparam>
 					<hkparam name="event">
@@ -51439,6 +51679,18 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#4373</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
 					<hkparam name="acyclic">false</hkparam>
 					<hkparam name="isAnnotation">false</hkparam>
 				</hkobject>
@@ -51461,6 +51713,12 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="data">@SGVI|iStoreAttribute|2</hkparam>
+		</hkobject>
+		
+		<hkobject name="#4373" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreIce1</hkparam>
 		</hkobject>
 		
 		<hkobject name="#4731" class="hkbClipGenerator" signature="0x333b85b9">
@@ -51506,7 +51764,7 @@
 		<hkobject name="#4735" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="3">
 				<hkobject>
 					<hkparam name="localTime">0.000000</hkparam>
 					<hkparam name="event">
@@ -51516,6 +51774,18 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#4337</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
 					<hkparam name="acyclic">false</hkparam>
 					<hkparam name="isAnnotation">false</hkparam>
 				</hkobject>
@@ -51538,6 +51808,12 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="data">@SGVI|iStoreAttribute|3</hkparam>
+		</hkobject>
+		
+		<hkobject name="#4337" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreThunder1</hkparam>
 		</hkobject>
 		
 		<hkobject name="#4734" class="hkbClipGenerator" signature="0x333b85b9">
