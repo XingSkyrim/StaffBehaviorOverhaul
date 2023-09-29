@@ -25,7 +25,7 @@
 				<hkcstring>SneakSprintStartRoll</hkcstring>
 			</hkparam>
 			<hkparam name="attributeNames" numelements="0"></hkparam>
-			<hkparam name="variableNames" numelements="17">
+			<hkparam name="variableNames" numelements="18">
 				<hkcstring>blendDefault</hkcstring>
 				<hkcstring>Direction</hkcstring>
 				<hkcstring>SpeedSampled</hkcstring>
@@ -43,6 +43,7 @@
 				<hkcstring>iState_NPCBow</hkcstring>
 				<hkcstring>IsSneaking</hkcstring>
 				<hkcstring>bAllowRotation</hkcstring>
+				<hkcstring>iState_StaffReady</hkcstring>
 			</hkparam>
 			<hkparam name="characterPropertyNames" numelements="0"></hkparam>
 		</hkobject>
@@ -50,7 +51,7 @@
 		<hkobject name="#0064" class="hkbVariableValueSet" signature="0x27812d8d">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="wordVariableValues" numelements="17">
+			<hkparam name="wordVariableValues" numelements="18">
 				<hkobject>
 					<hkparam name="value">1045220557</hkparam>
 				</hkobject>
@@ -102,6 +103,9 @@
 				<hkobject>
 					<hkparam name="value">0</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="value">35</hkparam>
+				</hkobject>
 			</hkparam>
 			<hkparam name="quadVariableValues" numelements="0"></hkparam>
 			<hkparam name="variantVariableValues" numelements="0"></hkparam>
@@ -111,7 +115,7 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="attributeDefaults" numelements="0"></hkparam>
-			<hkparam name="variableInfos" numelements="17">
+			<hkparam name="variableInfos" numelements="18">
 				<hkobject>
 					<hkparam name="role">
 						<hkobject>
@@ -264,6 +268,15 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_INT32</hkparam>
 				</hkobject>
 			</hkparam>
 			<hkparam name="characterPropertyInfos" numelements="0"></hkparam>
@@ -16841,13 +16854,13 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">1</hkparam>
-			<hkparam name="name">Staff_iStateGen</hkparam>
+			<hkparam name="name">StaffReady_iStateGen</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="pDefaultGenerator">#0862</hkparam>
-			<hkparam name="iStateToSetAs">9</hkparam>
-			<hkparam name="iPriority">5</hkparam>
+			<hkparam name="iStateToSetAs">35</hkparam>
+			<hkparam name="iPriority">6</hkparam>
 		</hkobject>
 		
 		 		<hkobject name="#3161" class="hkbClipGenerator" signature="0x333b85b9">

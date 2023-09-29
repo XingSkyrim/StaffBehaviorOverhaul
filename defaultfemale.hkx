@@ -23,7 +23,7 @@
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="deformableSkinNames" numelements="0"></hkparam>
 			<hkparam name="rigidSkinNames" numelements="0"></hkparam>
-			<hkparam name="animationNames" numelements="1687">
+			<hkparam name="animationNames" numelements="1707">
 				<hkcstring>Animations\1HM_1stP_Run.hkx</hkcstring>
 				<hkcstring>Animations\1hm_1stP_Walk.hkx</hkcstring>
 				<hkcstring>Animations\1HM_AttackForwardSprint.hkx</hkcstring>
@@ -1711,9 +1711,29 @@
 				<hkcstring>Animations\StfRight_FocusIntro.hkx</hkcstring>
 				<hkcstring>Animations\Xing\GripToStaff.hkx</hkcstring>
 				<hkcstring>Animations\Xing\GripToMelee.hkx</hkcstring>
+				<hkcstring>Animations\Xing\PreChantIdle.hkx</hkcstring>
+				<hkcstring>Animations\Xing\ChantLoopIdle.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage1_ChantIntro.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage1_ChantLoop.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage1_ChantStore.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage1_ChantFire.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage1_ChantIce.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage1_ChantThunder.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage2_ChantIntro.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage2_ChantLoop.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage2_ChantStore.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage2_ChantFire.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage2_ChantIce.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage2_ChantThunder.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage3_ChantIntro.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage3_ChantLoop.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage3_ChantStore.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage3_ChantFire.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage3_ChantIce.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage3_ChantThunder.hkx</hkcstring>
 			</hkparam>
 			<hkparam name="animationFilenames" numelements="0"></hkparam>
-			<hkparam name="characterPropertyNames" numelements="40">
+			<hkparam name="characterPropertyNames" numelements="39">
 				<hkcstring>IsFemale</hkcstring>
 				<hkcstring>IsHorse</hkcstring>
 				<hkcstring>IsMale</hkcstring>
@@ -1753,7 +1773,6 @@
 				<hkcstring>MountedCombatBowBlend</hkcstring>
 				<hkcstring>Quiver</hkcstring>
 				<hkcstring>RightHandAndQuiver</hkcstring>
-				<hkcstring>StaffMagicNode</hkcstring>
 			</hkparam>
 			<hkparam name="retargetingSkeletonMapperFilenames" numelements="0"></hkparam>
 			<hkparam name="lodNames" numelements="0"></hkparam>
@@ -2288,28 +2307,10 @@
 			</hkparam>
 		</hkobject>
 
-		<hkobject name="#1059" class="hkbBoneWeightArray" signature="0xcd902b77">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="boneWeights" numelements="99">
-				1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 1.000000
-				1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
-				0.000000 0.000000 0.000000
-			</hkparam>
-		</hkobject>
-		
-		
 		<hkobject name="#0060" class="hkbVariableValueSet" signature="0x27812d8d">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="wordVariableValues" numelements="40">
+			<hkparam name="wordVariableValues" numelements="39">
 				<hkobject>
 					<hkparam name="value">1</hkparam>
 				</hkobject>
@@ -2427,14 +2428,11 @@
 				<hkobject>
 					<hkparam name="value">28</hkparam>
 				</hkobject>
-				<hkobject>
-					<hkparam name="value">29</hkparam>
-				</hkobject>
 			</hkparam>
 			<hkparam name="quadVariableValues" numelements="0"></hkparam>
-			<hkparam name="variantVariableValues" numelements="30">
+			<hkparam name="variantVariableValues" numelements="29">
 				#0059 #0058 #0057 #0056 #0055 #0054 #0053 #0052 #0051 #0050 #0049 #0048 #0047 #0046 #0045 #0044
-				#0043 #0042 #0041 #0040 #0039 #0038 #0037 #0036 #0035 #0034 #0033 #0032 #0031 #1059
+				#0043 #0042 #0041 #0040 #0039 #0038 #0037 #0036 #0035 #0034 #0033 #0032 #0031
 			</hkparam>
 		</hkobject>
 
@@ -2452,7 +2450,7 @@
 			<hkparam name="modelUpMS">(0.000000 0.000000 1.000000 0.000000)</hkparam>
 			<hkparam name="modelForwardMS">(1.000000 0.000000 0.000000 0.000000)</hkparam>
 			<hkparam name="modelRightMS">(-0.000000 -1.000000 -0.000000 0.000000)</hkparam>
-			<hkparam name="characterPropertyInfos" numelements="40">
+			<hkparam name="characterPropertyInfos" numelements="39">
 				<hkobject>
 					<hkparam name="role">
 						<hkobject>
@@ -2560,15 +2558,6 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="type">VARIABLE_TYPE_REAL</hkparam>
-				</hkobject>
-				<hkobject>
-					<hkparam name="role">
-						<hkobject>
-							<hkparam name="role">ROLE_DEFAULT</hkparam>
-							<hkparam name="flags">0</hkparam>
-						</hkobject>
-					</hkparam>
-					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="role">
