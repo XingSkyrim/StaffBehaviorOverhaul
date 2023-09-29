@@ -777,13 +777,13 @@
 					<hkparam name="value">0</hkparam>
 				</hkobject>
 				<hkobject>
-					<hkparam name="value">0</hkparam>
+					<hkparam name="value">1</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="value">0</hkparam>
 				</hkobject>
 				<hkobject>
-					<hkparam name="value">0</hkparam>
+					<hkparam name="value">1</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="value">0</hkparam>
@@ -49291,6 +49291,17 @@
 			</hkparam>
 		</hkobject>
 		
+		<hkobject name="#3702" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">251</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#6052" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -49298,7 +49309,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#3702</hkparam>
 			<hkparam name="exitNotifyEvents">#3712</hkparam>
 			<hkparam name="transitions">#4334</hkparam>
 			<hkparam name="generator">#6057</hkparam>
@@ -49423,7 +49434,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="4">
-				#6060 #6060 #6060 #6060 
+				#6060 #6660 #6661 #6662 
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
@@ -49518,6 +49529,272 @@
 			<hkparam name="data">$StoreRemoveArt</hkparam>
 		</hkobject>
 		
+		<hkobject name="#6660" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage1_InstantFire</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\InstantFire1.hkx</hkparam>
+			<hkparam name="triggers">#6071</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#6071" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">-0.166666</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">221</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#6773</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#6773" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreRemoveArt</hkparam>
+		</hkobject>
+		
+		<hkobject name="#6661" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage1_InstantIce</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\InstantIce1.hkx</hkparam>
+			<hkparam name="triggers">#6072</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#6072" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">-0.166666</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">221</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#6774</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#6774" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreRemoveArt</hkparam>
+		</hkobject>
+		
+		<hkobject name="#6662" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage1_InstantThunder</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\InstantThunder1.hkx</hkparam>
+			<hkparam name="triggers">#6073</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#6073" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">-0.166666</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">221</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#6775</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#6775" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreRemoveArt</hkparam>
+		</hkobject>
 		
 		<hkobject name="#6055" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -49549,7 +49826,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="4">
-				#6063 #5730 #5732 #5734 
+				#6063 #6363 #6364 #6365 
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
@@ -49566,7 +49843,7 @@
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Xing\Stag2_ChantDefault.hkx</hkparam>
+			<hkparam name="animationName">Animations\Xing\Stage2_ChantDefault.hkx</hkparam>
 			<hkparam name="triggers">#6064</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -49598,7 +49875,7 @@
 		<hkobject name="#6064" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="3">
 				<hkobject>
 					<hkparam name="localTime">-0.166666</hkparam>
 					<hkparam name="event">
@@ -49623,7 +49900,294 @@
 					<hkparam name="acyclic">false</hkparam>
 					<hkparam name="isAnnotation">false</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#5773</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
 			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5773" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreRemoveArt</hkparam>
+		</hkobject>
+		
+		
+		<hkobject name="#6363" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage2_InstantFire</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\InstantFire2.hkx</hkparam>
+			<hkparam name="triggers">#7064</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7064" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">-0.166666</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">221</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#5774</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5774" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreRemoveArt</hkparam>
+		</hkobject>
+		
+		<hkobject name="#6364" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage2_InstantIce</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\InstantIce2.hkx</hkparam>
+			<hkparam name="triggers">#7065</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7065" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">-0.166666</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">221</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#5775</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5775" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreRemoveArt</hkparam>
+		</hkobject>
+		
+		
+		<hkobject name="#6365" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage2_InstantThunder</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\InstantThunder2.hkx</hkparam>
+			<hkparam name="triggers">#7066</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7066" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">-0.166666</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">221</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#5776</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5776" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreRemoveArt</hkparam>
 		</hkobject>
 		
 		<hkobject name="#6056" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
@@ -49752,14 +50316,14 @@
 		<hkobject name="#5091" class="hkbExpressionCondition" signature="0x1c3c1045">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expression">(iChantXingScore &gt;= 0) &amp;&amp; (bFinishChant == 0)</hkparam>
+			<hkparam name="expression">(iChantXingScore == 0) &amp;&amp; (bFinishChant == 0)</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 		</hkobject>
 		
 		<hkobject name="#5092" class="hkbExpressionCondition" signature="0x1c3c1045">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expression">(iChantXingScore == 1) &amp;&amp; (bFinishChant == 0) &amp;&amp; (bCanStage2Now == 1)</hkparam>
+			<hkparam name="expression">(iChantXingScore &gt;= 1) &amp;&amp; (bFinishChant == 0) &amp;&amp; (bCanStage2Now == 1)</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 		</hkobject>
 		
@@ -49936,14 +50500,14 @@
 		<hkobject name="#5991" class="hkbExpressionCondition" signature="0x1c3c1045">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expression">iMagStorePoint &gt;= 1</hkparam>
+			<hkparam name="expression">iMagStorePoint == 1</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 		</hkobject>
 		
 		<hkobject name="#5992" class="hkbExpressionCondition" signature="0x1c3c1045">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expression">(iMagStorePoint == 2) &amp;&amp; (bCanStoreNow == 1) &amp;&amp; (bCanStage2Now == 1)</hkparam>
+			<hkparam name="expression">(iMagStorePoint &gt;= 2) &amp;&amp; (bCanStoreNow == 1) &amp;&amp; (bCanStage2Now == 1)</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 		</hkobject>
 		
@@ -50484,7 +51048,7 @@
 		<hkobject name="#6091" class="hkbExpressionCondition" signature="0x1c3c1045">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expression">(iChantXingScore == 1) &amp;&amp; (bFinishChant == 1) &amp;&amp; (bCanStage2Now == 1)</hkparam>
+			<hkparam name="expression">(iChantXingScore &gt;= 1) &amp;&amp; (bFinishChant == 1) &amp;&amp; (bCanStage2Now == 1)</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 		</hkobject>
 		
@@ -50654,12 +51218,22 @@
 		<hkobject name="#8218" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="1">
+			<hkparam name="events" numelements="2">
 				<hkobject>
 					<hkparam name="id">268</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#8427</hkparam>
+				</hkobject>
 			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8427" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$ChantIntroOff</hkparam>
 		</hkobject>
 		
 		<hkobject name="#6218" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
@@ -50715,12 +51289,22 @@
 		<hkobject name="#8219" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="1">
+			<hkparam name="events" numelements="2">
 				<hkobject>
 					<hkparam name="id">269</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#8428</hkparam>
+				</hkobject>
 			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8428" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$ChantIntroOff</hkparam>
 		</hkobject>
 		
 		<hkobject name="#6219" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
@@ -52684,7 +53268,7 @@
 					<hkparam name="fromNestedStateId">0</hkparam>
 					<hkparam name="toNestedStateId">0</hkparam>
 					<hkparam name="priority">0</hkparam>
-					<hkparam name="flags">0</hkparam>
+					<hkparam name="flags">FLAG_TO_NESTED_STATE_ID_IS_VALID</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="triggerInterval">
@@ -52774,36 +53358,133 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5414</hkparam>
 			<hkparam name="exitNotifyEvents">#5624</hkparam>
 			<hkparam name="transitions">null</hkparam>
-			<hkparam name="generator">#5728</hkparam>
+			<hkparam name="generator">#7162</hkparam>
 			<hkparam name="name">Stage2_ChantStore_State</hkparam>
 			<hkparam name="stateId">2</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
 			<hkparam name="enable">true</hkparam>
 		</hkobject>
-	
-		<hkobject name="#5727" class="hkbClipTriggerArray" signature="0x59c23a0f">
+		
+		<hkobject name="#5414" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="1">
+			<hkparam name="events" numelements="2">
 				<hkobject>
-					<hkparam name="localTime">0.000000</hkparam>
-					<hkparam name="event">
-						<hkobject>
-							<hkparam name="id">215</hkparam>
-							<hkparam name="payload">null</hkparam>
-						</hkobject>
-					</hkparam>
-					<hkparam name="relativeToEndOfClip">true</hkparam>
-					<hkparam name="acyclic">false</hkparam>
-					<hkparam name="isAnnotation">false</hkparam>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#5415</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#5416</hkparam>
 				</hkobject>
 			</hkparam>
 		</hkobject>
 		
-		<hkobject name="#5728" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#5415" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">@SGVI|iMagStorePoint|2</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5416" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreImpact</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7162" class="hkbStateMachine" signature="0x816c1dcb">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">StoreStage2_Behavior</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="eventToSendWhenStateOrTransitionChanges">
+				<hkobject>
+					<hkparam name="id">-1</hkparam>
+					<hkparam name="payload">null</hkparam>
+					<!-- sender SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="startStateChooser">null</hkparam>
+			<hkparam name="startStateId">0</hkparam>
+			<hkparam name="returnToPreviousStateEventId">-1</hkparam>
+			<hkparam name="randomTransitionEventId">-1</hkparam>
+			<hkparam name="transitionToNextHigherStateEventId">-1</hkparam>
+			<hkparam name="transitionToNextLowerStateEventId">-1</hkparam>
+			<hkparam name="syncVariableIndex">-1</hkparam>
+			<!-- currentStateId SERIALIZE_IGNORED -->
+			<hkparam name="wrapAroundStateId">false</hkparam>
+			<hkparam name="maxSimultaneousTransitions">32</hkparam>
+			<hkparam name="startStateMode">START_STATE_MODE_DEFAULT</hkparam>
+			<hkparam name="selfTransitionMode">SELF_TRANSITION_MODE_NO_TRANSITION</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+			<hkparam name="states" numelements="4">
+				#7163 #7164 #7165 #7166
+			</hkparam>
+			<hkparam name="wildcardTransitions">null</hkparam>
+			<!-- stateIdToIndexMap SERIALIZE_IGNORED -->
+			<!-- activeTransitions SERIALIZE_IGNORED -->
+			<!-- transitionFlags SERIALIZE_IGNORED -->
+			<!-- wildcardTransitionFlags SERIALIZE_IGNORED -->
+			<!-- delayedTransitions SERIALIZE_IGNORED -->
+			<!-- timeInState SERIALIZE_IGNORED -->
+			<!-- lastLocalTime SERIALIZE_IGNORED -->
+			<!-- previousStateId SERIALIZE_IGNORED -->
+			<!-- nextStartStateIndexOverride SERIALIZE_IGNORED -->
+			<!-- stateOrTransitionChanged SERIALIZE_IGNORED -->
+			<!-- echoNextUpdate SERIALIZE_IGNORED -->
+			<!-- sCurrentStateIndexAndEntered SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7163" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="listeners" numelements="0"></hkparam>
+			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">#8076</hkparam>
+			<hkparam name="transitions">null</hkparam>
+			<hkparam name="generator">#5137</hkparam>
+			<hkparam name="name">Stage2_StoreDefault_State</hkparam>
+			<hkparam name="stateId">0</hkparam>
+			<hkparam name="probability">1.000000</hkparam>
+			<hkparam name="enable">true</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8076" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="2">
+				<hkobject>
+					<hkparam name="id">249</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#8077</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8077" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreOffImpact</hkparam>
+		</hkobject>
+		
+		
+		
+		<hkobject name="#5137" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
@@ -52815,7 +53496,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Xing\Stage2_ChantStore.hkx</hkparam>
-			<hkparam name="triggers">#5727</hkparam>
+			<hkparam name="triggers">#5138</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -52841,6 +53522,469 @@
 			<!-- atEnd SERIALIZE_IGNORED -->
 			<!-- ignoreStartTime SERIALIZE_IGNORED -->
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9730" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">@SGVI|iStoreAttribute|0</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9731" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreDefault2</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5138" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#9730</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#9731</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		
+		
+		<hkobject name="#7164" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="listeners" numelements="0"></hkparam>
+			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">#8086</hkparam>
+			<hkparam name="transitions">null</hkparam>
+			<hkparam name="generator">#5127</hkparam>
+			<hkparam name="name">Stage2_StoreFire_State</hkparam>
+			<hkparam name="stateId">1</hkparam>
+			<hkparam name="probability">1.000000</hkparam>
+			<hkparam name="enable">true</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8086" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="2">
+				<hkobject>
+					<hkparam name="id">249</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#8078</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8078" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreOffImpact</hkparam>
+		</hkobject>
+		
+		
+		
+		<hkobject name="#5127" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage2_ChantStoreFire</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\Stage2_ChantStore.hkx</hkparam>
+			<hkparam name="triggers">#5128</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9732" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">@SGVI|iStoreAttribute|1</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9733" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreFire2</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5128" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#9732</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#9733</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		
+		<hkobject name="#7165" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="listeners" numelements="0"></hkparam>
+			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">#8087</hkparam>
+			<hkparam name="transitions">null</hkparam>
+			<hkparam name="generator">#5139</hkparam>
+			<hkparam name="name">Stage2_StoreIce_State</hkparam>
+			<hkparam name="stateId">2</hkparam>
+			<hkparam name="probability">1.000000</hkparam>
+			<hkparam name="enable">true</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8087" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="2">
+				<hkobject>
+					<hkparam name="id">249</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#8079</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8079" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreOffImpact</hkparam>
+		</hkobject>
+		
+		
+		
+		<hkobject name="#5139" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage2_ChantStoreIce</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\Stage2_ChantStore.hkx</hkparam>
+			<hkparam name="triggers">#5140</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9734" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">@SGVI|iStoreAttribute|2</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9735" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreIce2</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5140" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#9734</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#9735</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7166" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="listeners" numelements="0"></hkparam>
+			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">#8088</hkparam>
+			<hkparam name="transitions">null</hkparam>
+			<hkparam name="generator">#5141</hkparam>
+			<hkparam name="name">Stage2_StoreThunder_State</hkparam>
+			<hkparam name="stateId">3</hkparam>
+			<hkparam name="probability">1.000000</hkparam>
+			<hkparam name="enable">true</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8088" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="2">
+				<hkobject>
+					<hkparam name="id">249</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">271</hkparam>
+					<hkparam name="payload">#8080</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8080" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreOffImpact</hkparam>
+		</hkobject>
+		
+		
+		
+		<hkobject name="#5141" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Stage2_ChantStoreThunder</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Xing\Stage2_ChantStore.hkx</hkparam>
+			<hkparam name="triggers">#5142</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_SINGLE_PLAY</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9736" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">@SGVI|iStoreAttribute|3</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9737" class="hkbStringEventPayload" signature="0xed04256a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="data">$StoreThunder2</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5142" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="3">
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#9736</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">271</hkparam>
+							<hkparam name="payload">#9737</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">215</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">true</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
 		</hkobject>
 		
 		<hkobject name="#3224" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
@@ -52875,7 +54019,7 @@
 			<hkparam name="listeners" numelements="0"></hkparam>
 			<hkparam name="enterNotifyEvents">#3225</hkparam>
 			<hkparam name="exitNotifyEvents">#3224</hkparam>
-			<hkparam name="transitions">null</hkparam>
+			<hkparam name="transitions">#4536</hkparam>
 			<hkparam name="generator">#5730</hkparam>
 			<hkparam name="name">Stage2_ChantFire_State</hkparam>
 			<hkparam name="stateId">3</hkparam>
@@ -52883,10 +54027,67 @@
 			<hkparam name="enable">true</hkparam>
 		</hkobject>
 	
+		<hkobject name="#4536" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="transitions" numelements="1">
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">282</hkparam>
+							<hkparam name="exitEventId">283</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#9113</hkparam>
+					<hkparam name="condition">null</hkparam>
+					<hkparam name="eventId">208</hkparam>
+					<hkparam name="toStateId">2</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">1</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">FLAG_TO_NESTED_STATE_ID_IS_VALID|FLAG_DISABLE_CONDITION|FLAG_USE_INITIATE_INTERVAL</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#5729" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="4">
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">282</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">1.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">283</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
 				<hkobject>
 					<hkparam name="localTime">-0.166666</hkparam>
 					<hkparam name="event">
@@ -52963,7 +54164,7 @@
 			<hkparam name="listeners" numelements="0"></hkparam>
 			<hkparam name="enterNotifyEvents">#3225</hkparam>
 			<hkparam name="exitNotifyEvents">#3224</hkparam>
-			<hkparam name="transitions">null</hkparam>
+			<hkparam name="transitions">#4537</hkparam>
 			<hkparam name="generator">#5732</hkparam>
 			<hkparam name="name">Stage2_ChantIce_State</hkparam>
 			<hkparam name="stateId">4</hkparam>
@@ -52971,10 +54172,67 @@
 			<hkparam name="enable">true</hkparam>
 		</hkobject>
 	
+		<hkobject name="#4537" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="transitions" numelements="1">
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">282</hkparam>
+							<hkparam name="exitEventId">283</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#9113</hkparam>
+					<hkparam name="condition">null</hkparam>
+					<hkparam name="eventId">208</hkparam>
+					<hkparam name="toStateId">2</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">2</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">FLAG_TO_NESTED_STATE_ID_IS_VALID|FLAG_DISABLE_CONDITION|FLAG_USE_INITIATE_INTERVAL</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#5731" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="4">
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">282</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">1.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">283</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
 				<hkobject>
 					<hkparam name="localTime">-0.166666</hkparam>
 					<hkparam name="event">
@@ -53051,7 +54309,7 @@
 			<hkparam name="listeners" numelements="0"></hkparam>
 			<hkparam name="enterNotifyEvents">#3225</hkparam>
 			<hkparam name="exitNotifyEvents">#3224</hkparam>
-			<hkparam name="transitions">null</hkparam>
+			<hkparam name="transitions">#4538</hkparam>
 			<hkparam name="generator">#5734</hkparam>
 			<hkparam name="name">Stage2_ChantThunder_State</hkparam>
 			<hkparam name="stateId">5</hkparam>
@@ -53059,10 +54317,67 @@
 			<hkparam name="enable">true</hkparam>
 		</hkobject>
 	
+		<hkobject name="#4538" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="transitions" numelements="1">
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">282</hkparam>
+							<hkparam name="exitEventId">283</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#9113</hkparam>
+					<hkparam name="condition">null</hkparam>
+					<hkparam name="eventId">208</hkparam>
+					<hkparam name="toStateId">2</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">3</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">FLAG_TO_NESTED_STATE_ID_IS_VALID|FLAG_DISABLE_CONDITION|FLAG_USE_INITIATE_INTERVAL</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#5733" class="hkbClipTriggerArray" signature="0x59c23a0f">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="triggers" numelements="2">
+			<hkparam name="triggers" numelements="4">
+				<hkobject>
+					<hkparam name="localTime">0.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">282</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">1.000000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">283</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
 				<hkobject>
 					<hkparam name="localTime">-0.166666</hkparam>
 					<hkparam name="event">
