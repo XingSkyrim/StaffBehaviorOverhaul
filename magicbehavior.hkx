@@ -6,7 +6,7 @@
 		<hkobject name="#0077" class="hkbBehaviorGraphStringData" signature="0xc713064e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="eventNames" numelements="288">
+			<hkparam name="eventNames" numelements="289">
 				<hkcstring>staggerStop</hkcstring>
 				<hkcstring>MRh_Equipped_Event</hkcstring>
 				<hkcstring>shoutStop</hkcstring>
@@ -295,6 +295,7 @@
 				<hkcstring>StoreMagReset</hkcstring>
 				<hkcstring>ResetStorePoint</hkcstring>
 				<hkcstring>ToChantState</hkcstring>
+				<hkcstring>ExitMagIdle</hkcstring>
 			</hkparam>
 			<hkparam name="attributeNames" numelements="0"></hkparam>
 			<hkparam name="variableNames" numelements="123">
@@ -2039,7 +2040,7 @@
 					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
 				</hkobject>
 			</hkparam>
-			<hkparam name="eventInfos" numelements="288">
+			<hkparam name="eventInfos" numelements="289">
 				<hkobject>
 					<hkparam name="flags">FLAG_SYNC_POINT</hkparam>
 				</hkobject>
@@ -2434,6 +2435,9 @@
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
 					<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
 				<hkobject>
@@ -5459,6 +5463,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#6005" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">164</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0158" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -5466,7 +5481,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#6005</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0168</hkparam>
 			<hkparam name="generator">#0159</hkparam>
@@ -16298,7 +16313,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#6006</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0474</hkparam>
 			<hkparam name="generator">#0465</hkparam>
@@ -16308,6 +16323,17 @@
 			<hkparam name="enable">true</hkparam>
 		</hkobject>
 
+		<hkobject name="#6006" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">164</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0478" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -46486,6 +46512,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#7322" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">288</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#1252" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -46494,7 +46531,7 @@
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
 			<hkparam name="enterNotifyEvents">null</hkparam>
-			<hkparam name="exitNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">#7322</hkparam>
 			<hkparam name="transitions">#1251</hkparam>
 			<hkparam name="generator">#0727</hkparam>
 			<hkparam name="name">MagicReady_Standing</hkparam>
