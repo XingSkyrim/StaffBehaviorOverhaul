@@ -6,7 +6,7 @@
 		<hkobject name="#0106" class="hkbBehaviorGraphStringData" signature="0xc713064e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="eventNames" numelements="1260">
+			<hkparam name="eventNames" numelements="1274">
 				<hkcstring>FootLeft</hkcstring>
 				<hkcstring>FootRight</hkcstring>
 				<hkcstring>WeapEquip</hkcstring>
@@ -1267,6 +1267,20 @@
 				<hkcstring>ChantStage2</hkcstring>
 				<hkcstring>ChantStage3</hkcstring>
 				<hkcstring>IncreaseChantScore</hkcstring>
+				<hkcstring>SoundPlay.MaleChantStage1</hkcstring>
+				<hkcstring>SoundPlay.MaleChantStage2</hkcstring>
+				<hkcstring>SoundPlay.MaleChantStage3</hkcstring>
+				<hkcstring>SoundPlay.FemaleChantStage1</hkcstring>
+				<hkcstring>SoundPlay.FemaleChantStage2</hkcstring>
+				<hkcstring>SoundPlay.FemaleChantStage3</hkcstring>
+				<hkcstring>DragonChantStage1</hkcstring>
+				<hkcstring>DragonChantStage2</hkcstring>
+				<hkcstring>DragonChantStage3</hkcstring>
+				<hkcstring>OpenXingBook</hkcstring>
+				<hkcstring>CloseXingBook</hkcstring>
+				<hkcstring>FlipXingBook</hkcstring>
+				<hkcstring>ReleaseXingBook</hkcstring>
+				<hkcstring>QuicklyFlipXingBook</hkcstring>
 			</hkparam>
 			<hkparam name="attributeNames" numelements="0"></hkparam>
 			<hkparam name="variableNames" numelements="249">
@@ -4694,7 +4708,7 @@
 					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
 				</hkobject>
 			</hkparam>
-			<hkparam name="eventInfos" numelements="1260">
+			<hkparam name="eventInfos" numelements="1274">
 				<hkobject>
 					<hkparam name="flags">FLAG_SYNC_POINT</hkparam>
 				</hkobject>
@@ -6431,6 +6445,48 @@
 				</hkobject>
 				<hkobject>
 					<hkparam name="flags">FLAG_SYNC_POINT</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="flags">0</hkparam>
@@ -41938,11 +41994,19 @@
 		<hkobject name="#1256" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="1">
+			<hkparam name="events" numelements="3">
 				<hkobject>
 					<hkparam name="id">930</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="id">1253</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>	
+				<hkobject>
+					<hkparam name="id">1237</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>	
 			</hkparam>
 		</hkobject>
 
@@ -77423,7 +77487,7 @@
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="expressionsData" numelements="2">
 				<hkobject>
-					<hkparam name="expression">bNotPreparetoChant = 1</hkparam>
+					<hkparam name="expression">bPreparetoChant = 0</hkparam>
 					<hkparam name="assignmentVariableIndex">-1</hkparam>
 					<hkparam name="assignmentEventIndex">-1</hkparam>
 					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
