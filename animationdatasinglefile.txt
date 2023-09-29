@@ -8729,7 +8729,7 @@ FootBack:0.333333
 1
 0.4 0 0 0 1
 
-25104
+25108
 1
 19
 Behaviors\0_Master.hkx
@@ -34273,6 +34273,41 @@ Stage3_ChantThunder
 ChantReset:2
 ChantFinish:3
 
+Stage1_ChantReleaseDefault
+1707
+1
+0
+0
+2
+ChantReset:2
+ChantFinish:3
+
+Stage2_ChantReleaseDefault
+1708
+1
+0
+0
+2
+ChantReset:2
+ChantFinish:3
+
+Stage3_ChantReleaseDefault
+1709
+1
+0
+0
+2
+ChantReset:2
+ChantFinish:3
+
+XingMagicShield
+1710
+1
+0
+0
+1
+ExitMagShield:3
+
 DLC01TrailerWalkForward
 623
 1
@@ -34282,7 +34317,7 @@ DLC01TrailerWalkForward
 AnimObjectUnequip:6.5
 IdleStop:8.66067
 
-12754
+12758
 100
 1.2
 1
@@ -47337,6 +47372,34 @@ IdleStop:8.66067
 1
 0 0 0 0 1
 
+1707
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1708
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1709
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1710
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
 1399
 0.8
 1
@@ -47344,7 +47407,7 @@ IdleStop:8.66067
 1
 0.8 0 0 0 1
 
-25095
+25099
 1
 19
 Behaviors\0_Master.hkx
@@ -72879,6 +72942,41 @@ Stage3_ChantThunder
 ChantReset:2
 ChantFinish:3
 
+Stage1_ChantReleaseDefault
+1707
+1
+0
+0
+2
+ChantReset:2
+ChantFinish:3
+
+Stage2_ChantReleaseDefault
+1708
+1
+0
+0
+2
+ChantReset:2
+ChantFinish:3
+
+Stage3_ChantReleaseDefault
+1709
+1
+0
+0
+2
+ChantReset:2
+ChantFinish:3
+
+XingMagicShield
+1710
+1
+0
+0
+1
+ExitMagShield:3
+
 DLC01TrailerWalkForward
 623
 1
@@ -72888,7 +72986,7 @@ DLC01TrailerWalkForward
 AnimObjectUnequip:6.5
 IdleStop:8.66067
 
-12791
+12795
 100
 1.2
 1
@@ -85974,6 +86072,34 @@ IdleStop:8.66067
 0 0 0 0 1
 
 1706
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1707
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1708
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1709
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1710
 3
 1
 0 0 0 0

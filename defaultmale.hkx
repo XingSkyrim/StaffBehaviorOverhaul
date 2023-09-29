@@ -23,7 +23,7 @@
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="deformableSkinNames" numelements="0"></hkparam>
 			<hkparam name="rigidSkinNames" numelements="0"></hkparam>
-			<hkparam name="animationNames" numelements="1707">
+			<hkparam name="animationNames" numelements="1711">
 				<hkcstring>Animations\1HM_1stP_Run.hkx</hkcstring>
 				<hkcstring>Animations\1hm_1stP_Walk.hkx</hkcstring>
 				<hkcstring>Animations\1HM_AttackForwardSprint.hkx</hkcstring>
@@ -1731,6 +1731,10 @@
 				<hkcstring>Animations\Xing\Stage3_ChantFire.hkx</hkcstring>
 				<hkcstring>Animations\Xing\Stage3_ChantIce.hkx</hkcstring>
 				<hkcstring>Animations\Xing\Stage3_ChantThunder.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage1_ChantDefault.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage2_ChantDefault.hkx</hkcstring>
+				<hkcstring>Animations\Xing\Stage3_ChantDefault.hkx</hkcstring>
+				<hkcstring>Animations\Xing\MagShieldIntro.hkx</hkcstring>
 			</hkparam>
 			<hkparam name="animationFilenames" numelements="0"></hkparam>
 			<hkparam name="characterPropertyNames" numelements="39">
