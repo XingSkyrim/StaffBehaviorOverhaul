@@ -6,7 +6,7 @@
 		<hkobject name="#0077" class="hkbBehaviorGraphStringData" signature="0xc713064e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="eventNames" numelements="105">
+			<hkparam name="eventNames" numelements="109">
 				<hkcstring>staggerStop</hkcstring>
 				<hkcstring>MRh_Equipped_Event</hkcstring>
 				<hkcstring>shoutStop</hkcstring>
@@ -112,9 +112,13 @@
 				<hkcstring>AnimObjectStop</hkcstring>
 				<hkcstring>SoundStop.XingStaffvsWood</hkcstring>
 				<hkcstring>SoundPlay.XingStaffvsWood</hkcstring>
+				<hkcstring>StartAnimatedCamera</hkcstring>
+				<hkcstring>EndAnimatedCamera</hkcstring>
+				<hkcstring>HeadTrackingOn</hkcstring>
+				<hkcstring>HeadTrackingOff</hkcstring>
 			</hkparam>
 			<hkparam name="attributeNames" numelements="0"></hkparam>
-			<hkparam name="variableNames" numelements="82">
+			<hkparam name="variableNames" numelements="81">
 				<hkcstring>blendDefault</hkcstring>
 				<hkcstring>blendMove1stP</hkcstring>
 				<hkcstring>blendMoveStop</hkcstring>
@@ -196,7 +200,6 @@
 				<hkcstring>BowAimOffsetHeading</hkcstring>
 				<hkcstring>BowAimOffsetPitch</hkcstring>
 				<hkcstring>bVoiceReady</hkcstring>
-				<hkcstring>bAllowRotation</hkcstring>
 			</hkparam>
 			<hkparam name="characterPropertyNames" numelements="7">
 				<hkcstring>LeftArm</hkcstring>
@@ -212,7 +215,7 @@
 		<hkobject name="#0078" class="hkbVariableValueSet" signature="0x27812d8d">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="wordVariableValues" numelements="82">
+			<hkparam name="wordVariableValues" numelements="81">
 				<hkobject>
 					<hkparam name="value">1045220557</hkparam>
 				</hkobject>
@@ -456,9 +459,6 @@
 				<hkobject>
 					<hkparam name="value">0</hkparam>
 				</hkobject>
-				<hkobject>
-					<hkparam name="value">0</hkparam>
-				</hkobject>
 			</hkparam>
 			<hkparam name="quadVariableValues" numelements="0"></hkparam>
 			<hkparam name="variantVariableValues" numelements="0"></hkparam>
@@ -468,7 +468,7 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="attributeDefaults" numelements="0"></hkparam>
-			<hkparam name="variableInfos" numelements="82">
+			<hkparam name="variableInfos" numelements="81">
 				<hkobject>
 					<hkparam name="role">
 						<hkobject>
@@ -1188,15 +1188,6 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="type">VARIABLE_TYPE_REAL</hkparam>
-				</hkobject>
-				<hkobject>
-					<hkparam name="role">
-						<hkobject>
-							<hkparam name="role">ROLE_DEFAULT</hkparam>
-							<hkparam name="flags">0</hkparam>
-						</hkobject>
-					</hkparam>
-					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="role">
@@ -1273,7 +1264,7 @@
 					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
 				</hkobject>
 			</hkparam>
-			<hkparam name="eventInfos" numelements="105">
+			<hkparam name="eventInfos" numelements="109">
 				<hkobject>
 					<hkparam name="flags">FLAG_SYNC_POINT</hkparam>
 				</hkobject>
@@ -1565,6 +1556,12 @@
 				<hkobject>
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
+					<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
 				<hkobject>
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
@@ -1572,6 +1569,12 @@
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
 				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+					<hkobject>
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
 				<hkobject>
@@ -6221,36 +6224,7 @@
 			<!-- ignoreStartTime SERIALIZE_IGNORED -->
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
-		
-		<hkobject name="#1348" class="hkbClipTriggerArray" signature="0x59c23a0f">
-			<hkparam name="triggers" numelements="2">
-				<hkobject>
-					<hkparam name="localTime">0.000000</hkparam>
-					<hkparam name="event">
-						<hkobject>
-							<hkparam name="id">103</hkparam>
-							<hkparam name="payload">null</hkparam>
-						</hkobject>
-					</hkparam>
-					<hkparam name="relativeToEndOfClip">true</hkparam>
-					<hkparam name="acyclic">false</hkparam>
-					<hkparam name="isAnnotation">false</hkparam>
-				</hkobject>
-				<hkobject>
-					<hkparam name="localTime">1.000000</hkparam>
-					<hkparam name="event">
-						<hkobject>
-							<hkparam name="id">104</hkparam>
-							<hkparam name="payload">null</hkparam>
-						</hkobject>
-					</hkparam>
-					<hkparam name="relativeToEndOfClip">false</hkparam>
-					<hkparam name="acyclic">false</hkparam>
-					<hkparam name="isAnnotation">false</hkparam>
-				</hkobject>
-			</hkparam>
-		</hkobject>
-		
+
 		<hkobject name="#0272" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -6263,7 +6237,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\StaffRight_Idle.hkx</hkparam>
-			<hkparam name="triggers">#1348</hkparam>
+			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -26353,21 +26327,7 @@
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 			<!-- internalExpressionsData SERIALIZE_IGNORED -->
 		</hkobject>
-		
-	
 
-		<hkobject name="#1350" class="hkbVariableBindingSet" signature="0x338ad4ff">
-			<hkparam name="bindings" numelements="1">
-				<hkobject>
-					<hkparam name="memberPath">bIsActive0</hkparam>
-					<hkparam name="variableIndex">81</hkparam>
-					<hkparam name="bitIndex">-1</hkparam>
-					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
-				</hkobject>
-			</hkparam>
-			<hkparam name="indexOfBindingToEnable">-1</hkparam>
-		</hkobject>
-		
 		<hkobject name="#1019" class="hkbModifierList" signature="0xa4180ca1">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -27536,7 +27496,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1079" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.033333</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.966667</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1078" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -27550,7 +27539,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkForward.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1079</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -27559,7 +27548,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -27590,7 +27579,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1082" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.033333</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.966667</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1081" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -27604,7 +27622,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkForward.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1082</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -27613,7 +27631,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -28124,7 +28142,37 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1109" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.033000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.800000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+
 		<hkobject name="#1108" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -28137,7 +28185,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkForwardLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1109</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -28146,7 +28194,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -28177,7 +28225,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-	
+		<hkobject name="#1112" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.033000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.800000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1111" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -28191,7 +28268,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkForwardLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1112</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -28200,7 +28277,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -28493,9 +28570,88 @@
 			</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1123" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Magic_RunStrafeLeft</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Mag_RunStrafeLeft.HKX</hkparam>
+			<hkparam name="triggers">#1124</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">16</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
 
-		
+		<hkobject name="#1122" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1123</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">154.496002</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1127" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.033333</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.733333</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1126" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -28509,7 +28665,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1127</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -28518,7 +28674,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -28549,7 +28705,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1130" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.033333</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.733333</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1129" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -28563,7 +28748,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1130</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -28572,7 +28757,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -28643,8 +28828,8 @@
 			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
 			<hkparam name="flags">17</hkparam>
 			<hkparam name="subtractLastChild">false</hkparam>
-			<hkparam name="children" numelements="4">
-				#1128 #1125 #1119 #1116
+			<hkparam name="children" numelements="5">
+				#1128 #1125 #1122 #1119 #1116
 			</hkparam>
 			<!-- childrenInternalStates SERIALIZE_IGNORED -->
 			<!-- sortedChildren SERIALIZE_IGNORED -->
@@ -28834,7 +29019,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-	
+		<hkobject name="#1142" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.900000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">1.867000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1141" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -28848,7 +29062,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkBackwardLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1142</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -28857,7 +29071,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -29131,7 +29345,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1155" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.100000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.933000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1154" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -29145,7 +29388,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkBackward.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1155</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -29154,7 +29397,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -29185,7 +29428,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-	
+		<hkobject name="#1158" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.100000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.933000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1157" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -29199,7 +29471,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkBackward.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1158</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -29208,7 +29480,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -29470,7 +29742,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1170" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.667000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">1.733000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1169" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -29484,7 +29785,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkBackwardRight.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1170</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -29493,7 +29794,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -29524,7 +29825,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1173" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.667000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">1.733000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1172" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -29538,7 +29868,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkBackwardRight.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1173</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -29547,7 +29877,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -29840,9 +30170,88 @@
 			</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1184" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Magic_RunStrafeRight</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Mag_RunStrafeRight.HKX</hkparam>
+			<hkparam name="triggers">#1185</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">16</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
 
-		
+		<hkobject name="#1183" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1184</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">154.496002</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1188" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.700000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">1.433000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1187" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -29856,7 +30265,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkRight.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1188</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -29865,7 +30274,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -29896,7 +30305,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-	
+		<hkobject name="#1191" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.700000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">1.433000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1190" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -29910,7 +30348,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkRight.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1191</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -29919,7 +30357,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -29990,8 +30428,8 @@
 			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
 			<hkparam name="flags">17</hkparam>
 			<hkparam name="subtractLastChild">false</hkparam>
-			<hkparam name="children" numelements="4">
-				#1189 #1186 #1180 #1177
+			<hkparam name="children" numelements="5">
+				#1189 #1186 #1183 #1180 #1177
 			</hkparam>
 			<!-- childrenInternalStates SERIALIZE_IGNORED -->
 			<!-- sortedChildren SERIALIZE_IGNORED -->
@@ -30181,7 +30619,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1203" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.033000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.733000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1202" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -30195,7 +30662,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkForwardRight.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1203</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -30204,7 +30671,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -30235,7 +30702,36 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		
+		<hkobject name="#1206" class="hkbClipTriggerArray" signature="0x59c23a0f">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="triggers" numelements="2">
+				<hkobject>
+					<hkparam name="localTime">0.033000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">11</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="localTime">0.733000</hkparam>
+					<hkparam name="event">
+						<hkobject>
+							<hkparam name="id">12</hkparam>
+							<hkparam name="payload">null</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="relativeToEndOfClip">false</hkparam>
+					<hkparam name="acyclic">false</hkparam>
+					<hkparam name="isAnnotation">false</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1205" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -30249,7 +30745,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="animationName">Animations\Mag_WalkForwardRight.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
+			<hkparam name="triggers">#1206</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
 			<hkparam name="startTime">0.000000</hkparam>
@@ -30258,7 +30754,7 @@
 			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
 			<hkparam name="animationBindingIndex">-1</hkparam>
 			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
+			<hkparam name="flags">16</hkparam>
 			<!-- animDatas SERIALIZE_IGNORED -->
 			<!-- animationControl SERIALIZE_IGNORED -->
 			<!-- originalTriggers SERIALIZE_IGNORED -->
@@ -30438,20 +30934,121 @@
 			<!-- pTransitionEffect SERIALIZE_IGNORED -->
 			<!-- currentMode SERIALIZE_IGNORED -->
 		</hkobject>
-		
-	
-		<hkobject name="#1441" class="hkbClipGenerator" signature="0x333b85b9">
+
+		<hkobject name="#1095" class="BSBoneSwitchGenerator" signature="0xf33d3eea">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">MLh_Staff_LocomotionBoneSwitch</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="pDefaultGenerator">#1351</hkparam>
+			<hkparam name="ChildrenA" numelements="1">
+				#1088
+			</hkparam>
+		</hkobject>
+
+		<hkobject name="#1353" class="hkbBlenderGenerator" signature="0x22df7147">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunForwardFast</hkparam>
+			<hkparam name="name">Staff_Direction_Blend</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunForward.HKX</hkparam>
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">0.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
+			<hkparam name="flags">49</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="8">
+				#1354 #1355 #1356 #1357 #1358 #1359 #1360 #1361
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#1352" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">fBlendParameter</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">12</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#1351" class="BSCyclicBlendTransitionGenerator" signature="0x5119eb06">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#1352</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_BSCyclicBlendGen</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="pBlenderGenerator">#1353</hkparam>
+			<hkparam name="EventToFreezeBlendValue">
+				<hkobject>
+					<hkparam name="id">77</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+			<hkparam name="EventToCrossBlend">
+				<hkobject>
+					<hkparam name="id">78</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+			<hkparam name="fBlendParameter">0.000000</hkparam>
+			<hkparam name="fTransitionDuration">0.200000</hkparam>
+			<hkparam name="eBlendCurve">BLEND_CURVE_SMOOTH</hkparam>
+			<!-- pTransitionBlenderGenerator SERIALIZE_IGNORED -->
+			<!-- pTransitionEffect SERIALIZE_IGNORED -->
+			<!-- currentMode SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#1371" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_RunForwardRightFast</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_RunForwardRight.HKX</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -30480,30 +31077,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1437" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1367" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1441</hkparam>
+			<hkparam name="generator">#1371</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">3509.870117</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1440" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1370" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunForward</hkparam>
+			<hkparam name="name">Staff_RunForwardRight</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunForward.HKX</hkparam>
+			<hkparam name="animationName">Animations\Stf_RunForwardRight.HKX</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -30532,30 +31129,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1436" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1366" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1440</hkparam>
+			<hkparam name="generator">#1370</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">350.987000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1439" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1369" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkForward</hkparam>
+			<hkparam name="name">Staff_WalkForwardRight</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkForward.hkx</hkparam>
+			<hkparam name="animationName">Animations\Stf_WalkForwardRight.hkx</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -30584,30 +31181,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1435" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1365" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1439</hkparam>
+			<hkparam name="generator">#1369</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">58.499500</hkparam>
+			<hkparam name="weight">58.119999</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1438" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1368" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkForwardSlow</hkparam>
+			<hkparam name="name">Staff_WalkForwardRightSlow</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkForward.hkx</hkparam>
+			<hkparam name="animationName">Animations\Stf_WalkForwardRight.hkx</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -30636,19 +31233,19 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1434" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1364" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1438</hkparam>
+			<hkparam name="generator">#1368</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">5.849950</hkparam>
+			<hkparam name="weight">5.812000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 				
-		<hkobject name="#1433" class="hkbVariableBindingSet" signature="0x338ad4ff">
+		<hkobject name="#1363" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="bindings" numelements="1">
@@ -30670,14 +31267,14 @@
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#1432" class="hkbBlenderGenerator" signature="0x22df7147">
+		<hkobject name="#1362" class="hkbBlenderGenerator" signature="0x22df7147">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">#1433</hkparam>
+			<hkparam name="variableBindingSet">#1363</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_ForwardBlend</hkparam>
+			<hkparam name="name">Staff_ForwardRightBlend</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
@@ -30689,7 +31286,7 @@
 			<hkparam name="flags">17</hkparam>
 			<hkparam name="subtractLastChild">false</hkparam>
 			<hkparam name="children" numelements="4">
-				#1434 #1435 #1436 #1437
+				#1364 #1365 #1366 #1367
 			</hkparam>
 			<!-- childrenInternalStates SERIALIZE_IGNORED -->
 			<!-- sortedChildren SERIALIZE_IGNORED -->
@@ -30701,30 +31298,30 @@
 			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
 		</hkobject>
 	 	
-		<hkobject name="#1361" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1354" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1432</hkparam>
+			<hkparam name="generator">#1362</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="weight">0.125000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 		
-		<hkobject name="#1431" class="hkbClipGenerator" signature="0x333b85b9">
+ 		<hkobject name="#1381" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunForwardLeftFast</hkparam>
+			<hkparam name="name">Staff_RunRightFast</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunForwardLeft.HKX</hkparam>
+			<hkparam name="animationName">Animations\Stf_RunRight.HKX</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -30753,30 +31350,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1427" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1377" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1431</hkparam>
+			<hkparam name="generator">#1381</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">3509.870117</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1430" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1380" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunForwardLeft</hkparam>
+			<hkparam name="name">Staff_RunRight</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunForwardLeft.HKX</hkparam>
+			<hkparam name="animationName">Animations\Stf_RunRight.HKX</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -30805,30 +31402,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1426" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1376" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1430</hkparam>
+			<hkparam name="generator">#1380</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">350.987000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1429" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1379" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkForwardLeft</hkparam>
+			<hkparam name="name">Staff_WalkRight</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkForwardLeft.hkx</hkparam>
+			<hkparam name="animationName">Animations\Stf_WalkRight.hkx</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -30857,303 +31454,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1425" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1375" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1429</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">54.681499</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1428" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkForwardLeftSlow</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkForwardLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">0.100000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1424" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1428</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">5.468150</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-				
-		<hkobject name="#1423" class="hkbVariableBindingSet" signature="0x338ad4ff">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="bindings" numelements="1">
-				<hkobject>
-					<hkparam name="memberPath">blendParameter</hkparam>
-					<!-- memberClass SERIALIZE_IGNORED -->
-					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
-					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
-					<!-- rootVariableIndex SERIALIZE_IGNORED -->
-					<hkparam name="variableIndex">13</hkparam>
-					<hkparam name="bitIndex">-1</hkparam>
-					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
-					<!-- memberType SERIALIZE_IGNORED -->
-					<!-- variableType SERIALIZE_IGNORED -->
-					<!-- flags SERIALIZE_IGNORED -->
-				</hkobject>
-			</hkparam>
-			<hkparam name="indexOfBindingToEnable">-1</hkparam>
-			<!-- hasOutputBinding SERIALIZE_IGNORED -->
-		</hkobject>
-		
-		<hkobject name="#1422" class="hkbBlenderGenerator" signature="0x22df7147">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">#1423</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_ForwardLeftBlend</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
-			<hkparam name="blendParameter">1.000000</hkparam>
-			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
-			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
-			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
-			<hkparam name="flags">17</hkparam>
-			<hkparam name="subtractLastChild">false</hkparam>
-			<hkparam name="children" numelements="4">
-				#1424 #1425 #1426 #1427
-			</hkparam>
-			<!-- childrenInternalStates SERIALIZE_IGNORED -->
-			<!-- sortedChildren SERIALIZE_IGNORED -->
-			<!-- endIntervalWeight SERIALIZE_IGNORED -->
-			<!-- numActiveChildren SERIALIZE_IGNORED -->
-			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
-			<!-- endIntervalIndex SERIALIZE_IGNORED -->
-			<!-- initSync SERIALIZE_IGNORED -->
-			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
-		</hkobject>
-	 	
-		<hkobject name="#1360" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1422</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">0.875000</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-		
-		<hkobject name="#1421" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunLeftFast</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunLeft.HKX</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">10.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1417" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1421</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">3509.870117</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1420" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunLeft</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunLeft.HKX</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">1.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1416" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1420</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">350.987000</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1419" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkLeft</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">1.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1415" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1419</hkparam>
+			<hkparam name="generator">#1379</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">52.916500</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1418" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1378" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkLeftSlow</hkparam>
+			<hkparam name="name">Staff_WalkRightSlow</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkLeft.hkx</hkparam>
+			<hkparam name="animationName">Animations\Stf_WalkRight.hkx</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -31182,19 +31506,19 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1414" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1374" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1418</hkparam>
+			<hkparam name="generator">#1378</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">5.291650</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 				
-		<hkobject name="#1413" class="hkbVariableBindingSet" signature="0x338ad4ff">
+		<hkobject name="#1373" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="bindings" numelements="1">
@@ -31216,14 +31540,14 @@
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#1412" class="hkbBlenderGenerator" signature="0x22df7147">
+		<hkobject name="#1372" class="hkbBlenderGenerator" signature="0x22df7147">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">#1413</hkparam>
+			<hkparam name="variableBindingSet">#1373</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_LeftBlend</hkparam>
+			<hkparam name="name">Staff_RightBlend</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
@@ -31235,7 +31559,7 @@
 			<hkparam name="flags">17</hkparam>
 			<hkparam name="subtractLastChild">false</hkparam>
 			<hkparam name="children" numelements="4">
-				#1414 #1415 #1416 #1417
+				#1374 #1375 #1376 #1377
 			</hkparam>
 			<!-- childrenInternalStates SERIALIZE_IGNORED -->
 			<!-- sortedChildren SERIALIZE_IGNORED -->
@@ -31247,561 +31571,15 @@
 			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
 		</hkobject>
 	 	
-		<hkobject name="#1359" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1355" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1412</hkparam>
+			<hkparam name="generator">#1372</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">0.750000</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-		
-		<hkobject name="#1411" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunBackwardLeftFast</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunBackwardLeft.HKX</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">10.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1407" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1411</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">3509.870117</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1410" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunBackwardLeft</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunBackwardLeft.HKX</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">1.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1406" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1410</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">350.987000</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1409" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkBackwardLeft</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkBackwardLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">1.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1405" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1409</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">52.460701</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1408" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkBackwardLeftSlow</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkBackwardLeft.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">0.100000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1404" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1408</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">5.246070</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-				
-		<hkobject name="#1403" class="hkbVariableBindingSet" signature="0x338ad4ff">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="bindings" numelements="1">
-				<hkobject>
-					<hkparam name="memberPath">blendParameter</hkparam>
-					<!-- memberClass SERIALIZE_IGNORED -->
-					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
-					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
-					<!-- rootVariableIndex SERIALIZE_IGNORED -->
-					<hkparam name="variableIndex">13</hkparam>
-					<hkparam name="bitIndex">-1</hkparam>
-					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
-					<!-- memberType SERIALIZE_IGNORED -->
-					<!-- variableType SERIALIZE_IGNORED -->
-					<!-- flags SERIALIZE_IGNORED -->
-				</hkobject>
-			</hkparam>
-			<hkparam name="indexOfBindingToEnable">-1</hkparam>
-			<!-- hasOutputBinding SERIALIZE_IGNORED -->
-		</hkobject>
-		
-		<hkobject name="#1402" class="hkbBlenderGenerator" signature="0x22df7147">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">#1403</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_BackwardLeftBlend</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
-			<hkparam name="blendParameter">1.000000</hkparam>
-			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
-			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
-			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
-			<hkparam name="flags">17</hkparam>
-			<hkparam name="subtractLastChild">false</hkparam>
-			<hkparam name="children" numelements="4">
-				#1404 #1405 #1406 #1407
-			</hkparam>
-			<!-- childrenInternalStates SERIALIZE_IGNORED -->
-			<!-- sortedChildren SERIALIZE_IGNORED -->
-			<!-- endIntervalWeight SERIALIZE_IGNORED -->
-			<!-- numActiveChildren SERIALIZE_IGNORED -->
-			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
-			<!-- endIntervalIndex SERIALIZE_IGNORED -->
-			<!-- initSync SERIALIZE_IGNORED -->
-			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
-		</hkobject>
-	 	
-		<hkobject name="#1358" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1402</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">0.625000</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-		
-		<hkobject name="#1401" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunBackwardFast</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunBackward.HKX</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">10.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1397" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1401</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">3509.870117</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1400" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunBackward</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunBackward.HKX</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">1.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1396" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1400</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">350.987000</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1399" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkBackward</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkBackward.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">1.000000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1395" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1399</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">45.453300</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-
-		<hkobject name="#1398" class="hkbClipGenerator" signature="0x333b85b9">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkBackwardSlow</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkBackward.hkx</hkparam>
-			<hkparam name="triggers">null</hkparam>
-			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
-			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
-			<hkparam name="startTime">0.000000</hkparam>
-			<hkparam name="playbackSpeed">0.100000</hkparam>
-			<hkparam name="enforcedDuration">0.000000</hkparam>
-			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
-			<hkparam name="animationBindingIndex">-1</hkparam>
-			<hkparam name="mode">MODE_LOOPING</hkparam>
-			<hkparam name="flags">0</hkparam>
-			<!-- animDatas SERIALIZE_IGNORED -->
-			<!-- animationControl SERIALIZE_IGNORED -->
-			<!-- originalTriggers SERIALIZE_IGNORED -->
-			<!-- mapperData SERIALIZE_IGNORED -->
-			<!-- binding SERIALIZE_IGNORED -->
-			<!-- mirroredAnimation SERIALIZE_IGNORED -->
-			<!-- extractedMotion SERIALIZE_IGNORED -->
-			<!-- echos SERIALIZE_IGNORED -->
-			<!-- localTime SERIALIZE_IGNORED -->
-			<!-- time SERIALIZE_IGNORED -->
-			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
-			<!-- bufferSize SERIALIZE_IGNORED -->
-			<!-- echoBufferSize SERIALIZE_IGNORED -->
-			<!-- atEnd SERIALIZE_IGNORED -->
-			<!-- ignoreStartTime SERIALIZE_IGNORED -->
-			<!-- pingPongBackward SERIALIZE_IGNORED -->
-		</hkobject>
-
-		<hkobject name="#1394" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1398</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">4.545330</hkparam>
-			<hkparam name="worldFromModelWeight">1.000000</hkparam>
-		</hkobject>
-				
-		<hkobject name="#1393" class="hkbVariableBindingSet" signature="0x338ad4ff">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="bindings" numelements="1">
-				<hkobject>
-					<hkparam name="memberPath">blendParameter</hkparam>
-					<!-- memberClass SERIALIZE_IGNORED -->
-					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
-					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
-					<!-- rootVariableIndex SERIALIZE_IGNORED -->
-					<hkparam name="variableIndex">13</hkparam>
-					<hkparam name="bitIndex">-1</hkparam>
-					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
-					<!-- memberType SERIALIZE_IGNORED -->
-					<!-- variableType SERIALIZE_IGNORED -->
-					<!-- flags SERIALIZE_IGNORED -->
-				</hkobject>
-			</hkparam>
-			<hkparam name="indexOfBindingToEnable">-1</hkparam>
-			<!-- hasOutputBinding SERIALIZE_IGNORED -->
-		</hkobject>
-		
-		<hkobject name="#1392" class="hkbBlenderGenerator" signature="0x22df7147">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">#1393</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_BackwardBlend</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
-			<hkparam name="blendParameter">1.000000</hkparam>
-			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
-			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
-			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
-			<hkparam name="flags">17</hkparam>
-			<hkparam name="subtractLastChild">false</hkparam>
-			<hkparam name="children" numelements="4">
-				#1394 #1395 #1396 #1397
-			</hkparam>
-			<!-- childrenInternalStates SERIALIZE_IGNORED -->
-			<!-- sortedChildren SERIALIZE_IGNORED -->
-			<!-- endIntervalWeight SERIALIZE_IGNORED -->
-			<!-- numActiveChildren SERIALIZE_IGNORED -->
-			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
-			<!-- endIntervalIndex SERIALIZE_IGNORED -->
-			<!-- initSync SERIALIZE_IGNORED -->
-			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
-		</hkobject>
-	 	
-		<hkobject name="#1357" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1392</hkparam>
-			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">0.500000</hkparam>
+			<hkparam name="weight">0.250000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 		
@@ -32078,18 +31856,18 @@
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 		
-		<hkobject name="#1381" class="hkbClipGenerator" signature="0x333b85b9">
+ 		<hkobject name="#1401" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunRightFast</hkparam>
+			<hkparam name="name">Staff_RunBackwardFast</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunRight.HKX</hkparam>
+			<hkparam name="animationName">Animations\Stf_RunBackward.HKX</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -32118,30 +31896,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1377" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1397" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1381</hkparam>
+			<hkparam name="generator">#1401</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">3509.870117</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1380" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1400" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunRight</hkparam>
+			<hkparam name="name">Staff_RunBackward</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunRight.HKX</hkparam>
+			<hkparam name="animationName">Animations\Stf_RunBackward.HKX</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -32170,30 +31948,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1376" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1396" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1380</hkparam>
+			<hkparam name="generator">#1400</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">350.987000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1379" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1399" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkRight</hkparam>
+			<hkparam name="name">Staff_WalkBackward</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkRight.hkx</hkparam>
+			<hkparam name="animationName">Animations\Stf_WalkBackward.hkx</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -32222,30 +32000,576 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1375" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1395" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1379</hkparam>
+			<hkparam name="generator">#1399</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">45.453300</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1398" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_WalkBackwardSlow</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_WalkBackward.hkx</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">0.100000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1394" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1398</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">4.545330</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+				
+		<hkobject name="#1393" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">blendParameter</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">13</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#1392" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#1393</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_BackwardBlend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
+			<hkparam name="flags">17</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="4">
+				#1394 #1395 #1396 #1397
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+	 	
+		<hkobject name="#1357" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1392</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">0.500000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+ 		<hkobject name="#1411" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_RunBackwardLeftFast</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_RunBackwardLeft.HKX</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">10.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1407" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1411</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">3509.870117</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1410" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_RunBackwardLeft</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_RunBackwardLeft.HKX</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1406" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1410</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">350.987000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1409" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_WalkBackwardLeft</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_WalkBackwardLeft.hkx</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1405" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1409</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">52.460701</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1408" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_WalkBackwardLeftSlow</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_WalkBackwardLeft.hkx</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">0.100000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1404" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1408</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">5.246070</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+				
+		<hkobject name="#1403" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">blendParameter</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">13</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#1402" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#1403</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_BackwardLeftBlend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
+			<hkparam name="flags">17</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="4">
+				#1404 #1405 #1406 #1407
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+	 	
+		<hkobject name="#1358" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1402</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">0.625000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+ 		<hkobject name="#1421" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_RunLeftFast</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_RunLeft.HKX</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">10.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1417" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1421</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">3509.870117</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1420" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_RunLeft</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_RunLeft.HKX</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1416" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1420</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">350.987000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1419" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_WalkLeft</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_WalkLeft.hkx</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1415" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1419</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">52.916500</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1378" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1418" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkRightSlow</hkparam>
+			<hkparam name="name">Staff_WalkLeftSlow</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkRight.hkx</hkparam>
+			<hkparam name="animationName">Animations\Stf_WalkLeft.hkx</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -32274,19 +32598,19 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1374" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1414" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1378</hkparam>
+			<hkparam name="generator">#1418</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">5.291650</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 				
-		<hkobject name="#1373" class="hkbVariableBindingSet" signature="0x338ad4ff">
+		<hkobject name="#1413" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="bindings" numelements="1">
@@ -32308,14 +32632,14 @@
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#1372" class="hkbBlenderGenerator" signature="0x22df7147">
+		<hkobject name="#1412" class="hkbBlenderGenerator" signature="0x22df7147">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">#1373</hkparam>
+			<hkparam name="variableBindingSet">#1413</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RightBlend</hkparam>
+			<hkparam name="name">Staff_LeftBlend</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
@@ -32327,7 +32651,7 @@
 			<hkparam name="flags">17</hkparam>
 			<hkparam name="subtractLastChild">false</hkparam>
 			<hkparam name="children" numelements="4">
-				#1374 #1375 #1376 #1377
+				#1414 #1415 #1416 #1417
 			</hkparam>
 			<!-- childrenInternalStates SERIALIZE_IGNORED -->
 			<!-- sortedChildren SERIALIZE_IGNORED -->
@@ -32339,30 +32663,30 @@
 			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
 		</hkobject>
 	 	
-		<hkobject name="#1355" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1359" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1372</hkparam>
+			<hkparam name="generator">#1412</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">0.250000</hkparam>
+			<hkparam name="weight">0.750000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 		
-		<hkobject name="#1371" class="hkbClipGenerator" signature="0x333b85b9">
+ 		<hkobject name="#1431" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunForwardRightFast</hkparam>
+			<hkparam name="name">Staff_RunForwardLeftFast</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunForwardRight.HKX</hkparam>
+			<hkparam name="animationName">Animations\Stf_RunForwardLeft.HKX</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -32391,30 +32715,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1367" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1427" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1371</hkparam>
+			<hkparam name="generator">#1431</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">3509.870117</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1370" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1430" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_RunForwardRight</hkparam>
+			<hkparam name="name">Staff_RunForwardLeft</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_RunForwardRight.HKX</hkparam>
+			<hkparam name="animationName">Animations\Stf_RunForwardLeft.HKX</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -32443,30 +32767,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1366" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1426" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1370</hkparam>
+			<hkparam name="generator">#1430</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
 			<hkparam name="weight">350.987000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1369" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1429" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkForwardRight</hkparam>
+			<hkparam name="name">Staff_WalkForwardLeft</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkForwardRight.hkx</hkparam>
+			<hkparam name="animationName">Animations\Stf_WalkForwardLeft.hkx</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -32495,30 +32819,30 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1365" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1425" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1369</hkparam>
+			<hkparam name="generator">#1429</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">58.119999</hkparam>
+			<hkparam name="weight">54.681499</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
-		<hkobject name="#1368" class="hkbClipGenerator" signature="0x333b85b9">
+		<hkobject name="#1428" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_WalkForwardRightSlow</hkparam>
+			<hkparam name="name">Staff_WalkForwardLeftSlow</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="animationName">Animations\Stf_WalkForwardRight.hkx</hkparam>
+			<hkparam name="animationName">Animations\Stf_WalkForwardLeft.hkx</hkparam>
 			<hkparam name="triggers">null</hkparam>
 			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
 			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
@@ -32547,19 +32871,19 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
-		<hkobject name="#1364" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1424" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1368</hkparam>
+			<hkparam name="generator">#1428</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">5.812000</hkparam>
+			<hkparam name="weight">5.468150</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 				
-		<hkobject name="#1363" class="hkbVariableBindingSet" signature="0x338ad4ff">
+		<hkobject name="#1423" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="bindings" numelements="1">
@@ -32581,14 +32905,14 @@
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#1362" class="hkbBlenderGenerator" signature="0x22df7147">
+		<hkobject name="#1422" class="hkbBlenderGenerator" signature="0x22df7147">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">#1363</hkparam>
+			<hkparam name="variableBindingSet">#1423</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_ForwardRightBlend</hkparam>
+			<hkparam name="name">Staff_ForwardLeftBlend</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
@@ -32600,7 +32924,7 @@
 			<hkparam name="flags">17</hkparam>
 			<hkparam name="subtractLastChild">false</hkparam>
 			<hkparam name="children" numelements="4">
-				#1364 #1365 #1366 #1367
+				#1424 #1425 #1426 #1427
 			</hkparam>
 			<!-- childrenInternalStates SERIALIZE_IGNORED -->
 			<!-- sortedChildren SERIALIZE_IGNORED -->
@@ -32612,62 +32936,237 @@
 			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
 		</hkobject>
 	 	
-		<hkobject name="#1354" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+		<hkobject name="#1360" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1362</hkparam>
+			<hkparam name="generator">#1422</hkparam>
 			<hkparam name="boneWeights">null</hkparam>
-			<hkparam name="weight">0.125000</hkparam>
+			<hkparam name="weight">0.875000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 		
-		
-		
-		<hkobject name="#1353" class="hkbBlenderGenerator" signature="0x22df7147">
+ 		<hkobject name="#1441" class="hkbClipGenerator" signature="0x333b85b9">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_Direction_Blend</hkparam>
+			<hkparam name="name">Staff_RunForwardFast</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
-			<hkparam name="blendParameter">0.000000</hkparam>
-			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
-			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
-			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
-			<hkparam name="flags">49</hkparam>
-			<hkparam name="subtractLastChild">false</hkparam>
-			<hkparam name="children" numelements="8">
-				#1354 #1355 #1356 #1357 #1358 #1359 #1360 #1361
-			</hkparam>
-			<!-- childrenInternalStates SERIALIZE_IGNORED -->
-			<!-- sortedChildren SERIALIZE_IGNORED -->
-			<!-- endIntervalWeight SERIALIZE_IGNORED -->
-			<!-- numActiveChildren SERIALIZE_IGNORED -->
-			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
-			<!-- endIntervalIndex SERIALIZE_IGNORED -->
-			<!-- initSync SERIALIZE_IGNORED -->
-			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_RunForward.HKX</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">10.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
-		
-		<hkobject name="#1352" class="hkbVariableBindingSet" signature="0x338ad4ff">
+
+		<hkobject name="#1437" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1441</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">3509.870117</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1440" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_RunForward</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_RunForward.HKX</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1436" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1440</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">350.987000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1439" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_WalkForward</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_WalkForward.hkx</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">1.000000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1435" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1439</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">58.499500</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+
+		<hkobject name="#1438" class="hkbClipGenerator" signature="0x333b85b9">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">Staff_WalkForwardSlow</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="animationName">Animations\Stf_WalkForward.hkx</hkparam>
+			<hkparam name="triggers">null</hkparam>
+			<hkparam name="cropStartAmountLocalTime">0.000000</hkparam>
+			<hkparam name="cropEndAmountLocalTime">0.000000</hkparam>
+			<hkparam name="startTime">0.000000</hkparam>
+			<hkparam name="playbackSpeed">0.100000</hkparam>
+			<hkparam name="enforcedDuration">0.000000</hkparam>
+			<hkparam name="userControlledTimeFraction">0.000000</hkparam>
+			<hkparam name="animationBindingIndex">-1</hkparam>
+			<hkparam name="mode">MODE_LOOPING</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<!-- animDatas SERIALIZE_IGNORED -->
+			<!-- animationControl SERIALIZE_IGNORED -->
+			<!-- originalTriggers SERIALIZE_IGNORED -->
+			<!-- mapperData SERIALIZE_IGNORED -->
+			<!-- binding SERIALIZE_IGNORED -->
+			<!-- mirroredAnimation SERIALIZE_IGNORED -->
+			<!-- extractedMotion SERIALIZE_IGNORED -->
+			<!-- echos SERIALIZE_IGNORED -->
+			<!-- localTime SERIALIZE_IGNORED -->
+			<!-- time SERIALIZE_IGNORED -->
+			<!-- previousUserControlledTimeFraction SERIALIZE_IGNORED -->
+			<!-- bufferSize SERIALIZE_IGNORED -->
+			<!-- echoBufferSize SERIALIZE_IGNORED -->
+			<!-- atEnd SERIALIZE_IGNORED -->
+			<!-- ignoreStartTime SERIALIZE_IGNORED -->
+			<!-- pingPongBackward SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#1434" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#1438</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">5.849950</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+				
+		<hkobject name="#1433" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="bindings" numelements="1">
 				<hkobject>
-					<hkparam name="memberPath">fBlendParameter</hkparam>
+					<hkparam name="memberPath">blendParameter</hkparam>
 					<!-- memberClass SERIALIZE_IGNORED -->
 					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
 					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
 					<!-- rootVariableIndex SERIALIZE_IGNORED -->
-					<hkparam name="variableIndex">12</hkparam>
+					<hkparam name="variableIndex">13</hkparam>
 					<hkparam name="bitIndex">-1</hkparam>
 					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
 					<!-- memberType SERIALIZE_IGNORED -->
@@ -32679,53 +33178,47 @@
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#1351" class="BSCyclicBlendTransitionGenerator" signature="0x5119eb06">
+		<hkobject name="#1432" class="hkbBlenderGenerator" signature="0x22df7147">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">#1352</hkparam>
+			<hkparam name="variableBindingSet">#1433</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
-			<hkparam name="name">Staff_BSCyclicBlendGen</hkparam>
+			<hkparam name="name">Staff_ForwardBlend</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="pBlenderGenerator">#1353</hkparam>
-			<hkparam name="EventToFreezeBlendValue">
-				<hkobject>
-					<hkparam name="id">77</hkparam>
-					<hkparam name="payload">null</hkparam>
-				</hkobject>
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
+			<hkparam name="flags">17</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="4">
+				#1434 #1435 #1436 #1437
 			</hkparam>
-			<hkparam name="EventToCrossBlend">
-				<hkobject>
-					<hkparam name="id">78</hkparam>
-					<hkparam name="payload">null</hkparam>
-				</hkobject>
-			</hkparam>
-			<hkparam name="fBlendParameter">0.000000</hkparam>
-			<hkparam name="fTransitionDuration">0.200000</hkparam>
-			<hkparam name="eBlendCurve">BLEND_CURVE_SMOOTH</hkparam>
-			<!-- pTransitionBlenderGenerator SERIALIZE_IGNORED -->
-			<!-- pTransitionEffect SERIALIZE_IGNORED -->
-			<!-- currentMode SERIALIZE_IGNORED -->
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
 		</hkobject>
-			
-		<hkobject name="#1095" class="BSBoneSwitchGenerator" signature="0xf33d3eea">
+	 	
+		<hkobject name="#1361" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">1</hkparam>
-			<hkparam name="name">MLh_Staff_LocomotionBoneSwitch</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="pDefaultGenerator">#1351</hkparam>
-			<hkparam name="ChildrenA" numelements="1">
-				#1088
-			</hkparam>
+			<hkparam name="generator">#1432</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
 		</hkobject>
 
 		<hkobject name="#1209" class="hkbVariableBindingSet" signature="0x338ad4ff">
