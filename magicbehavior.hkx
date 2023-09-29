@@ -6,7 +6,7 @@
 		<hkobject name="#0077" class="hkbBehaviorGraphStringData" signature="0xc713064e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="eventNames" numelements="205">
+			<hkparam name="eventNames" numelements="221">
 				<hkcstring>staggerStop</hkcstring>
 				<hkcstring>MRh_Equipped_Event</hkcstring>
 				<hkcstring>shoutStop</hkcstring>
@@ -134,8 +134,8 @@
 				<hkcstring>ACStfChargeLoop</hkcstring>
 				<hkcstring>ACStfPreAimedCon</hkcstring>
 				<hkcstring>StfCastState</hkcstring>
-				<hkcstring>GoinStfCastState</hkcstring>
-				<hkcstring>OutStfCastState</hkcstring>
+				<hkcstring>CheckInStfCast</hkcstring>
+				<hkcstring>CheckOutStfCast</hkcstring>
 				<hkcstring>SneakStfCastIn</hkcstring>
 				<hkcstring>SneakStfCastOut</hkcstring>
 				<hkcstring>StaffSneakState</hkcstring>
@@ -212,9 +212,25 @@
 				<hkcstring>ActionLeftRelease</hkcstring>
 				<hkcstring>StopWantCast</hkcstring>
 				<hkcstring>ResetWantCast</hkcstring>
+				<hkcstring>QuitChant</hkcstring>
+				<hkcstring>ChantStart</hkcstring>
+				<hkcstring>ChantStop</hkcstring>
+				<hkcstring>ChantStore</hkcstring>
+				<hkcstring>FireChant</hkcstring>
+				<hkcstring>IceChant</hkcstring>
+				<hkcstring>ThunderChant</hkcstring>
+				<hkcstring>OpenMagicBook</hkcstring>
+				<hkcstring>CloseMagicBook</hkcstring>
+				<hkcstring>ChantKeepon</hkcstring>
+				<hkcstring>ChantFinish</hkcstring>
+				<hkcstring>CheckOnlyPlayerCast</hkcstring>
+				<hkcstring>StandCastIn</hkcstring>
+				<hkcstring>StandCastOut</hkcstring>
+				<hkcstring>StandFocusIn</hkcstring>
+				<hkcstring>StandFocusOut</hkcstring>
 			</hkparam>
 			<hkparam name="attributeNames" numelements="0"></hkparam>
-			<hkparam name="variableNames" numelements="96">
+			<hkparam name="variableNames" numelements="104">
 				<hkcstring>blendDefault</hkcstring>
 				<hkcstring>blendMove1stP</hkcstring>
 				<hkcstring>blendMoveStop</hkcstring>
@@ -298,7 +314,7 @@
 				<hkcstring>bVoiceReady</hkcstring>
 				<hkcstring>bAllowRotation</hkcstring>
 				<hkcstring>bAnimationDriven</hkcstring>
-				<hkcstring>BeginStaffCast</hkcstring>
+				<hkcstring>BeingStaffCast</hkcstring>
 				<hkcstring>IsStaffSneak</hkcstring>
 				<hkcstring>FinishCharge</hkcstring>
 				<hkcstring>LeftFinishCharge</hkcstring>
@@ -311,8 +327,16 @@
 				<hkcstring>NextIsFocus</hkcstring>
 				<hkcstring>bInFocus</hkcstring>
 				<hkcstring>bInSummon</hkcstring>
+				<hkcstring>iState_StaffReady</hkcstring>
+				<hkcstring>iState_StaffCasting</hkcstring>
+				<hkcstring>InChantState</hkcstring>
+				<hkcstring>bPreparetoChant</hkcstring>
+				<hkcstring>bNotPreparetoChant</hkcstring>
+				<hkcstring>bOnlyPlayerCast</hkcstring>
+				<hkcstring>bStandCast</hkcstring>
+				<hkcstring>bStandFocus</hkcstring>
 			</hkparam>
-			<hkparam name="characterPropertyNames" numelements="7">
+			<hkparam name="characterPropertyNames" numelements="9">
 				<hkcstring>LeftArm</hkcstring>
 				<hkcstring>UpperBody</hkcstring>
 				<hkcstring>ExcludeRootAndCamera</hkcstring>
@@ -320,13 +344,15 @@
 				<hkcstring>MRhFavorBoneSwitch</hkcstring>
 				<hkcstring>MLhFavorBoneSwitch</hkcstring>
 				<hkcstring>RightArm</hkcstring>
+				<hkcstring>RHStaffOnly</hkcstring>
+				<hkcstring>StaffMagicNode</hkcstring>
 			</hkparam>
 		</hkobject>
 
 		<hkobject name="#0078" class="hkbVariableValueSet" signature="0x27812d8d">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="wordVariableValues" numelements="96">
+			<hkparam name="wordVariableValues" numelements="104">
 				<hkobject>
 					<hkparam name="value">1045220557</hkparam>
 				</hkobject>
@@ -615,6 +641,30 @@
 				<hkobject>
 					<hkparam name="value">0</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="value">35</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">360</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
 			</hkparam>
 			<hkparam name="quadVariableValues" numelements="0"></hkparam>
 			<hkparam name="variantVariableValues" numelements="0"></hkparam>
@@ -624,7 +674,7 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="attributeDefaults" numelements="0"></hkparam>
-			<hkparam name="variableInfos" numelements="96">
+			<hkparam name="variableInfos" numelements="104">
 				<hkobject>
 					<hkparam name="role">
 						<hkobject>
@@ -1470,6 +1520,78 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="type">VARIABLE_TYPE_INT32</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_INT32</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_INT32</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="role">
@@ -1490,7 +1612,7 @@
 					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
 				</hkobject>
 			</hkparam>
-			<hkparam name="characterPropertyInfos" numelements="7">
+			<hkparam name="characterPropertyInfos" numelements="9">
 				<hkobject>
 					<hkparam name="role">
 						<hkobject>
@@ -1554,8 +1676,26 @@
 					</hkparam>
 					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
+				</hkobject>
 			</hkparam>
-			<hkparam name="eventInfos" numelements="205">
+			<hkparam name="eventInfos" numelements="221">
 				<hkobject>
 					<hkparam name="flags">FLAG_SYNC_POINT</hkparam>
 				</hkobject>
@@ -1950,6 +2090,54 @@
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
 					<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
 				<hkobject>
@@ -5735,7 +5923,7 @@
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
 			<hkparam name="enterNotifyEvents">#5002</hkparam>
-			<hkparam name="exitNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">#7007</hkparam>
 			<hkparam name="transitions">#0205</hkparam>
 			<hkparam name="generator">#0199</hkparam>
 			<hkparam name="name">MRh_AimedReleaseState</hkparam>
@@ -6327,7 +6515,7 @@
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
 			<hkparam name="enterNotifyEvents">#6796</hkparam>
-			<hkparam name="exitNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">#7007</hkparam>
 			<hkparam name="transitions">null</hkparam>
 			<hkparam name="generator">#0150</hkparam>
 			<hkparam name="name">MRh_NotyetReadyState</hkparam>
@@ -6709,6 +6897,71 @@
 			<hkparam name="enable">true</hkparam>
 		</hkobject>
 
+		<hkobject name="#9218" class="hkbModifierList" signature="0xa4180ca1">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">MRh_Aimed_ML</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifiers" numelements="3">
+				#0185 #0106 #7106
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7106" class="BSIsActiveModifier" signature="0xb0fde45a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#7107</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">StandCast_IsActiveModifier</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="bIsActive0">false</hkparam>
+			<hkparam name="bInvertActive0">false</hkparam>
+			<hkparam name="bIsActive1">false</hkparam>
+			<hkparam name="bInvertActive1">false</hkparam>
+			<hkparam name="bIsActive2">false</hkparam>
+			<hkparam name="bInvertActive2">false</hkparam>
+			<hkparam name="bIsActive3">false</hkparam>
+			<hkparam name="bInvertActive3">false</hkparam>
+			<hkparam name="bIsActive4">false</hkparam>
+			<hkparam name="bInvertActive4">false</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7107" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">bIsActive0</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">102</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
 		<hkobject name="#0218" class="hkbModifierList" signature="0xa4180ca1">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -6738,7 +6991,7 @@
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="modifier">#0218</hkparam>
+			<hkparam name="modifier">#9218</hkparam>
 			<hkparam name="generator">#0190</hkparam>
 		</hkobject>
 
@@ -8801,7 +9054,7 @@
 		<hkobject name="#8515" class="hkbExpressionCondition" signature="0x1c3c1045">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expression">(BeginStaffCast == 1) &amp;&amp; (IsFocus &gt;= 3) &amp;&amp; (IsPlayer == 1)</hkparam>
+			<hkparam name="expression">(BeingStaffCast == 1) &amp;&amp; (IsFocus &gt;= 3) &amp;&amp; (IsPlayer == 1)</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 		</hkobject>
 		
@@ -8810,7 +9063,7 @@
 		<hkobject name="#8516" class="hkbExpressionCondition" signature="0x1c3c1045">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expression">(BeginStaffCast != 1) || (IsFocus &lt; 3) || (IsPlayer == 0)</hkparam>
+			<hkparam name="expression">(BeingStaffCast != 1) || (IsFocus &lt; 3) || (IsPlayer == 0)</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 		</hkobject>
 		
@@ -9429,7 +9682,7 @@
 		<hkobject name="#8713" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="3">
+			<hkparam name="events" numelements="4">
 				<hkobject>
 					<hkparam name="id">106</hkparam>
 					<hkparam name="payload">null</hkparam>
@@ -9440,6 +9693,10 @@
 				</hkobject>
 				<hkobject>
 					<hkparam name="id">167</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">128</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
 			</hkparam>
@@ -9482,7 +9739,7 @@
 		<hkobject name="#8715" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="3">
+			<hkparam name="events" numelements="4">
 				<hkobject>
 					<hkparam name="id">106</hkparam>
 					<hkparam name="payload">null</hkparam>
@@ -9493,6 +9750,10 @@
 				</hkobject>
 				<hkobject>
 					<hkparam name="id">167</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">128</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
 			</hkparam>
@@ -9555,12 +9816,58 @@
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="modifiers" numelements="2">
-				#0185 #0106
+			<hkparam name="modifiers" numelements="3">
+				#0185 #0106 #7108
 			</hkparam>
 		</hkobject>
 		
 		
+		<hkobject name="#7108" class="BSIsActiveModifier" signature="0xb0fde45a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#7109</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">StandFocus_IsActiveModifier</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="bIsActive0">false</hkparam>
+			<hkparam name="bInvertActive0">false</hkparam>
+			<hkparam name="bIsActive1">false</hkparam>
+			<hkparam name="bInvertActive1">false</hkparam>
+			<hkparam name="bIsActive2">false</hkparam>
+			<hkparam name="bInvertActive2">false</hkparam>
+			<hkparam name="bIsActive3">false</hkparam>
+			<hkparam name="bInvertActive3">false</hkparam>
+			<hkparam name="bIsActive4">false</hkparam>
+			<hkparam name="bInvertActive4">false</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7109" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">bIsActive0</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">103</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
 		
 		<hkobject name="#8505" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -17027,10 +17334,28 @@
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="modifier">#0529</hkparam>
+			<hkparam name="modifier">#9228</hkparam>
 			<hkparam name="generator">#0493</hkparam>
 		</hkobject>
 
+		<hkobject name="#9228" class="hkbModifierList" signature="0xa4180ca1">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">MLh_Aimed_ML</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifiers" numelements="3">
+				#0185 #0106 #7106
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0530" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -19741,8 +20066,8 @@
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="modifiers" numelements="2">
-				#0185 #0106
+			<hkparam name="modifiers" numelements="3">
+				#0185 #0106 #7108
 			</hkparam>
 		</hkobject>
 		
@@ -20238,6 +20563,8 @@
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
 
+		
+		
 		<hkobject name="#0603" class="hkbBlenderGenerator" signature="0x22df7147">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -20458,6 +20785,161 @@
 			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
 		</hkobject>
 
+		<hkobject name="#8614" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#0622</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">XingMRh_And_LHStaff_Blend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">-1.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
+			<hkparam name="flags">16</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="3">
+				#8631 #8620 #8635
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8635" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0616</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8631" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0290</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">-1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8620" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#8592</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">0.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8592" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">MRh_And_LHStaff_Xing_Blend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">0</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="2">
+				#8595 #8593
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#8595" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0089</hkparam>
+			<hkparam name="boneWeights">#8596</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8596" class="hkbBoneWeightArray" signature="0xcd902b77">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="boneWeights" numelements="82">
+				1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.500000 0.500000 0.500000 0.000000 0.000000 0.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 0.500000 0.500000 0.500000 0.000000 1.000000 1.000000 1.000000 0.000000 1.000000 0.000000 1.000000 0.500000 0.000000
+				1.000000 0.500000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8593" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0290</hkparam>
+			<hkparam name="boneWeights">#8594</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">0.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8594" class="hkbBoneWeightArray" signature="0xcd902b77">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="boneWeights" numelements="99">
+				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.500000 0.500000 0.500000 1.000000 1.000000 1.000000 0.000000 0.000000
+				0.000000 1.000000 1.000000 0.500000 0.500000 0.500000 1.000000 0.000000 1.000000 0.000000 1.000000 0.000000 1.000000 0.000000 0.500000 1.000000
+				0.000000 0.500000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0624" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -20609,6 +21091,206 @@
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
 
+
+		
+
+		
+		
+		
+		
+		
+		
+		<hkobject name="#9594" class="hkbBoneWeightArray" signature="0xcd902b77">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="boneWeights" numelements="99">
+				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.500000 0.500000 0.500000 1.000000 1.000000 1.000000 0.000000 0.000000
+				0.000000 1.000000 1.000000 0.500000 0.500000 0.500000 1.000000 0.000000 1.000000 0.000000 1.000000 0.000000 1.000000 0.000000 0.500000 1.000000
+				0.000000 0.500000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9593" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0290</hkparam>
+			<hkparam name="boneWeights">#9594</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">0.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9596" class="hkbBoneWeightArray" signature="0xcd902b77">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="boneWeights" numelements="82">
+				1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.500000 0.500000 0.500000 0.000000 0.000000 0.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 0.500000 0.500000 0.500000 0.000000 1.000000 1.000000 1.000000 0.000000 1.000000 0.000000 1.000000 0.500000 0.000000
+				1.000000 0.500000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9595" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0089</hkparam>
+			<hkparam name="boneWeights">#9596</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9592" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">DualStaff_Xing_Blend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">0</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="2">
+				#9595 #9593
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9625" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#9592</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">0.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9634" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0089</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9636" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0290</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">-1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9623" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#0627</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">XingDualStaff_Blend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">-1.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
+			<hkparam name="flags">16</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="3">
+				#9636 #9625 #9634
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9613" class="hkbManualSelectorGenerator" signature="0xd932fab8">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#0628</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">XingLHStaff_RHMagicCast_MSG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="generators" numelements="10">
+				#0290 #0290 #0290 #0290 #0290 #0290 #0290 #0290 #9623 #8614
+			</hkparam>
+			<hkparam name="selectedGeneratorIndex">0</hkparam>
+			<hkparam name="currentGeneratorIndex">0</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9371" class="hkbManualSelectorGenerator" signature="0xd932fab8">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#9271</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">OnlyPlayer_LHStaff_RHMagicCast_MSG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="generators" numelements="2">
+				#0613 #9613
+			</hkparam>
+			<hkparam name="selectedGeneratorIndex">0</hkparam>
+			<hkparam name="currentGeneratorIndex">0</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0088" class="hkbManualSelectorGenerator" signature="0xd932fab8">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -20621,12 +21303,203 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0089 #0089 #0089 #0089 #0089 #0089 #0089 #0089 #0613 #0284 #0089 #0089
+				#0089 #0089 #0089 #0089 #0089 #0089 #0089 #0089 #9371 #9372 #0089
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#9372" class="hkbManualSelectorGenerator" signature="0xd932fab8">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#9271</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">OnlyPlayer_RightHandMagicCast_MSG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="generators" numelements="2">
+				#0284 #9284
+			</hkparam>
+			<hkparam name="selectedGeneratorIndex">0</hkparam>
+			<hkparam name="currentGeneratorIndex">0</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9284" class="hkbManualSelectorGenerator" signature="0xd932fab8">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#0612</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">XingRightHandMagicCast_MSG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="generators" numelements="10">
+				#0290 #0290 #0290 #0290 #0290 #0290 #0290 #0290 #7603 #0285
+			</hkparam>
+			<hkparam name="selectedGeneratorIndex">0</hkparam>
+			<hkparam name="currentGeneratorIndex">0</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7603" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#0611</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">XingRHStaff_And_MLh_Blend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">-1.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">-1</hkparam>
+			<hkparam name="flags">16</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="3">
+				#7636 #7605 #7634
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7634" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0089</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7636" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0607</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">-1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7605" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#7592</hkparam>
+			<hkparam name="boneWeights">null</hkparam>
+			<hkparam name="weight">0.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7592" class="hkbBlenderGenerator" signature="0x22df7147">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">RHStaff_And_MLh_Xing_Blend</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="referencePoseWeightThreshold">0.000000</hkparam>
+			<hkparam name="blendParameter">1.000000</hkparam>
+			<hkparam name="minCyclicBlendParameter">0.000000</hkparam>
+			<hkparam name="maxCyclicBlendParameter">1.000000</hkparam>
+			<hkparam name="indexOfSyncMasterChild">0</hkparam>
+			<hkparam name="flags">0</hkparam>
+			<hkparam name="subtractLastChild">false</hkparam>
+			<hkparam name="children" numelements="2">
+				#7595 #7593
+			</hkparam>
+			<!-- childrenInternalStates SERIALIZE_IGNORED -->
+			<!-- sortedChildren SERIALIZE_IGNORED -->
+			<!-- endIntervalWeight SERIALIZE_IGNORED -->
+			<!-- numActiveChildren SERIALIZE_IGNORED -->
+			<!-- beginIntervalIndex SERIALIZE_IGNORED -->
+			<!-- endIntervalIndex SERIALIZE_IGNORED -->
+			<!-- initSync SERIALIZE_IGNORED -->
+			<!-- doSubtractiveBlend SERIALIZE_IGNORED -->
+		</hkobject>
+
+		<hkobject name="#7595" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0089</hkparam>
+			<hkparam name="boneWeights">#7596</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">1.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7596" class="hkbBoneWeightArray" signature="0xcd902b77">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="boneWeights" numelements="82">
+				1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 0.500000 0.500000 0.500000 0.000000 0.000000 0.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 0.500000 0.500000 0.500000 0.000000 1.000000 1.000000 1.000000 0.000000 1.000000 0.000000 1.000000 0.500000 0.000000
+				1.000000 0.500000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7593" class="hkbBlenderGeneratorChild" signature="0xe2b384b0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="generator">#0290</hkparam>
+			<hkparam name="boneWeights">#7594</hkparam>
+			<hkparam name="weight">1.000000</hkparam>
+			<hkparam name="worldFromModelWeight">0.000000</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7594" class="hkbBoneWeightArray" signature="0xcd902b77">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="boneWeights" numelements="99">
+				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.500000 0.500000 0.500000 1.000000 1.000000 1.000000 0.000000 0.000000
+				0.000000 1.000000 1.000000 0.500000 0.500000 0.500000 1.000000 0.000000 1.000000 0.000000 1.000000 0.000000 1.000000 0.000000 0.500000 1.000000
+				0.000000 0.500000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000 1.000000
+				1.000000 1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+				0.000000 0.000000 0.000000
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0087" class="BSBoneSwitchGeneratorBoneData" signature="0xc1215be6">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -24443,8 +25316,26 @@
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="modifier">#6999</hkparam>
+			<hkparam name="modifier">#9998</hkparam>
 			<hkparam name="generator">#8270</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9998" class="hkbModifierList" signature="0xa4180ca1">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfSneakMagCasting_ML</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifiers" numelements="2">
+				#6995 #7108
+			</hkparam>
 		</hkobject>
 		
 		<hkobject name="#8271" class="hkbVariableBindingSet" signature="0x338ad4ff">
@@ -24748,7 +25639,7 @@
 		<hkobject name="#6245" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="transitions" numelements="5">
+			<hkparam name="transitions" numelements="4">
 				<hkobject>
 					<hkparam name="triggerInterval">
 						<hkobject>
@@ -24847,32 +25738,6 @@
 					<hkparam name="transition">#6243</hkparam>
 					<hkparam name="condition">null</hkparam>
 					<hkparam name="eventId">43</hkparam>
-					<hkparam name="toStateId">1</hkparam>
-					<hkparam name="fromNestedStateId">0</hkparam>
-					<hkparam name="toNestedStateId">0</hkparam>
-					<hkparam name="priority">0</hkparam>
-					<hkparam name="flags">FLAG_DISABLE_CONDITION</hkparam>
-				</hkobject>
-				<hkobject>
-					<hkparam name="triggerInterval">
-						<hkobject>
-							<hkparam name="enterEventId">-1</hkparam>
-							<hkparam name="exitEventId">-1</hkparam>
-							<hkparam name="enterTime">0.000000</hkparam>
-							<hkparam name="exitTime">0.000000</hkparam>
-						</hkobject>
-					</hkparam>
-					<hkparam name="initiateInterval">
-						<hkobject>
-							<hkparam name="enterEventId">-1</hkparam>
-							<hkparam name="exitEventId">-1</hkparam>
-							<hkparam name="enterTime">0.000000</hkparam>
-							<hkparam name="exitTime">0.000000</hkparam>
-						</hkobject>
-					</hkparam>
-					<hkparam name="transition">#6243</hkparam>
-					<hkparam name="condition">null</hkparam>
-					<hkparam name="eventId">199</hkparam>
 					<hkparam name="toStateId">1</hkparam>
 					<hkparam name="fromNestedStateId">0</hkparam>
 					<hkparam name="toNestedStateId">0</hkparam>
@@ -26112,6 +26977,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#9784" class="hkbBoneWeightArray" signature="0xcd902b77">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="boneWeights" numelements="1">
+				1.000000
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0785" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -26133,6 +27009,28 @@
 			<hkparam name="indexOfBindingToEnable">-1</hkparam>
 			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
+		
+		<hkobject name="#9785" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">spBoneWeight</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">3</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_CHARACTER_PROPERTY</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
 
 		<hkobject name="#0786" class="BSBoneSwitchGeneratorBoneData" signature="0xc1215be6">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -26144,6 +27042,16 @@
 			<hkparam name="spBoneWeight">#0784</hkparam>
 		</hkobject>
 
+		<hkobject name="#9786" class="BSBoneSwitchGeneratorBoneData" signature="0xc1215be6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#9785</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="pGenerator">#0088</hkparam>
+			<hkparam name="spBoneWeight">#9784</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0787" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -29620,6 +30528,39 @@
 			<!-- pTransitionEffect SERIALIZE_IGNORED -->
 			<!-- currentMode SERIALIZE_IGNORED -->
 		</hkobject>
+		
+		<hkobject name="#9917" class="BSCyclicBlendTransitionGenerator" signature="0x5119eb06">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#0916</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">StaffCast_BSCyclicBlendTransitionGenerator</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="pBlenderGenerator">#0915</hkparam>
+			<hkparam name="EventToFreezeBlendValue">
+				<hkobject>
+					<hkparam name="id">77</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+			<hkparam name="EventToCrossBlend">
+				<hkobject>
+					<hkparam name="id">78</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+			<hkparam name="fBlendParameter">0.000000</hkparam>
+			<hkparam name="fTransitionDuration">0.200000</hkparam>
+			<hkparam name="eBlendCurve">BLEND_CURVE_SMOOTH</hkparam>
+			<!-- pTransitionBlenderGenerator SERIALIZE_IGNORED -->
+			<!-- pTransitionEffect SERIALIZE_IGNORED -->
+			<!-- currentMode SERIALIZE_IGNORED -->
+		</hkobject>
+		
 
 		<hkobject name="#0918" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -29655,7 +30596,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="2">
-				#0917 #0802
+				#9241 #0802
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
@@ -29777,6 +30718,23 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#9923" class="BSBoneSwitchGenerator" signature="0xf33d3eea">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StaffCast_OnlyMagic_BoneSwitchGen</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="pDefaultGenerator">#0922</hkparam>
+			<hkparam name="ChildrenA" numelements="1">
+				#9786
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0924" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -29809,6 +30767,40 @@
 				</hkobject>
 			</hkparam>
 		</hkobject>
+		
+		<hkobject name="#9924" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="transitions" numelements="1">
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#0267</hkparam>
+					<hkparam name="condition">null</hkparam>
+					<hkparam name="eventId">4</hkparam>
+					<hkparam name="toStateId">0</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">0</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">FLAG_DISABLE_CONDITION</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 
 		<hkobject name="#0925" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -29833,6 +30825,23 @@
 			<hkparam name="transitions">#0924</hkparam>
 			<hkparam name="generator">#0923</hkparam>
 			<hkparam name="name">MagicCastingLocomotionState</hkparam>
+			<hkparam name="stateId">1</hkparam>
+			<hkparam name="probability">1.000000</hkparam>
+			<hkparam name="enable">true</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9926" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="listeners" numelements="0"></hkparam>
+			<hkparam name="enterNotifyEvents">#0925</hkparam>
+			<hkparam name="exitNotifyEvents">null</hkparam>
+			<hkparam name="transitions">#9924</hkparam>
+			<hkparam name="generator">#9923</hkparam>
+			<hkparam name="name">StaffCastingLocomotionState</hkparam>
 			<hkparam name="stateId">1</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
 			<hkparam name="enable">true</hkparam>
@@ -31883,6 +32892,46 @@
 				</hkobject>
 			</hkparam>
 		</hkobject>
+		
+		<hkobject name="#9334" class="hkbExpressionCondition" signature="0x1c3c1045">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expression">(bAllowRotation == 0) &amp;&amp; (bAnimationDriven == 0)</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#9333" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="transitions" numelements="1">
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#0275</hkparam>
+					<hkparam name="condition">#9334</hkparam>
+					<hkparam name="eventId">5</hkparam>
+					<hkparam name="toStateId">1</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">0</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
 
 		<hkobject name="#1004" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -32144,17 +33193,97 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">1</hkparam>
-			<hkparam name="name">StfMagCasting_ML</hkparam>
+			<hkparam name="name">CheckPlayerStfMagCasting_ML</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
 			<hkparam name="modifiers" numelements="2">
-				#6995 #6991
+				#6995 #6531
 			</hkparam>
 		</hkobject>
 	
+		<hkobject name="#6995" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">CheckPlayerCast_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#6994</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#6994" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
+				<hkobject>
+					<hkparam name="expression">CheckOnlyPlayerCast if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#6531" class="BSIsActiveModifier" signature="0xb0fde45a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#6532</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">bOnlyPlayerCast_IsActive</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="bIsActive0">false</hkparam>
+			<hkparam name="bInvertActive0">false</hkparam>
+			<hkparam name="bIsActive1">false</hkparam>
+			<hkparam name="bInvertActive1">false</hkparam>
+			<hkparam name="bIsActive2">false</hkparam>
+			<hkparam name="bInvertActive2">false</hkparam>
+			<hkparam name="bIsActive3">false</hkparam>
+			<hkparam name="bInvertActive3">false</hkparam>
+			<hkparam name="bIsActive4">false</hkparam>
+			<hkparam name="bInvertActive4">false</hkparam>
+		</hkobject>
+		
+		<hkobject name="#6532" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">bIsActive0</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">101</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
 		<hkobject name="#6998" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -32176,9 +33305,9 @@
 		<hkobject name="#6997" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expressionsData" numelements="8">
+			<hkparam name="expressionsData" numelements="12">
 				<hkobject>
-					<hkparam name="expression">BeginStaffCast =1*( (iRightHandType == 8) || (iLeftHandType == 8) )</hkparam>
+					<hkparam name="expression">BeingStaffCast =1*( (iRightHandType == 8) || (iLeftHandType == 8) )</hkparam>
 					<hkparam name="assignmentVariableIndex">-1</hkparam>
 					<hkparam name="assignmentEventIndex">-1</hkparam>
 					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
@@ -32241,33 +33370,32 @@
 					<!-- raisedEvent SERIALIZE_IGNORED -->
 					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
 				</hkobject>
-			</hkparam>
-		</hkobject>
-		
-		<hkobject name="#6995" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="variableBindingSet">null</hkparam>
-			<!-- cachedBindables SERIALIZE_IGNORED -->
-			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="userData">2</hkparam>
-			<hkparam name="name">GoinStfCast_EEM</hkparam>
-			<!-- id SERIALIZE_IGNORED -->
-			<!-- cloneState SERIALIZE_IGNORED -->
-			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="enable">true</hkparam>
-			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="expressions">#6994</hkparam>
-			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
-			<!-- internalExpressionsData SERIALIZE_IGNORED -->
-		</hkobject>
-		
-		<hkobject name="#6994" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
-			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
-			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="expressionsData" numelements="1">
 				<hkobject>
-					<hkparam name="expression">GoinStfCastState if ( (iRightHandType == 8) || (iLeftHandType == 8) )</hkparam>
+					<hkparam name="expression">StandCastIn if (bStandCast == 1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+				<hkobject>
+					<hkparam name="expression">StandCastOut if (bStandCast == 0)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+				<hkobject>
+					<hkparam name="expression">StandFocusIn if (bStandFocus == 1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+				<hkobject>
+					<hkparam name="expression">StandFocusOut if (bStandFocus == 0)</hkparam>
 					<hkparam name="assignmentVariableIndex">-1</hkparam>
 					<hkparam name="assignmentEventIndex">-1</hkparam>
 					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
@@ -32276,6 +33404,8 @@
 				</hkobject>
 			</hkparam>
 		</hkobject>
+		
+		
 		
 		<hkobject name="#6993" class="hkbBlendingTransitionEffect" signature="0xfd8584fe">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -32334,18 +33464,63 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">1</hkparam>
-			<hkparam name="name">StfCastRotation_EDM</hkparam>
+			<hkparam name="name">StfCastOnlyStand_EDM</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="modifier">#3001</hkparam>
-			<hkparam name="activateEventId">127</hkparam>
-			<hkparam name="deactivateEventId">128</hkparam>
+			<hkparam name="modifier">#7919</hkparam>
+			<hkparam name="activateEventId">217</hkparam>
+			<hkparam name="deactivateEventId">218</hkparam>
 			<hkparam name="activeByDefault">false</hkparam>
 			<!-- isActive SERIALIZE_IGNORED -->
 		</hkobject>
+		
+		
+		
+		<hkobject name="#7210" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">StopRotationMovement_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#7211</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+			
+		<hkobject name="#7211" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="2">
+				<hkobject>
+					<hkparam name="expression">moveStop if(BeingStaffCast == 1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+				<hkobject>
+					<hkparam name="expression">bAllowRotation = BeingStaffCast </hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		
 		<hkobject name="#7728" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -32403,16 +33578,103 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="2">
-				#7001 #7901
+				#7001 #7810
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 		
-		<hkobject name="#7901" class="hkbStateMachine" signature="0x816c1dcb">
+		<hkobject name="#7806" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">127</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7807" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">128</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7809" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="listeners" numelements="0"></hkparam>
+			<hkparam name="enterNotifyEvents">#7806</hkparam>
+			<hkparam name="exitNotifyEvents">#7807</hkparam>
+			<hkparam name="transitions">null</hkparam>
+			<hkparam name="generator">#7901</hkparam>
+			<hkparam name="name">CheckStfCastingState</hkparam>
+			<hkparam name="stateId">0</hkparam>
+			<hkparam name="probability">1.000000</hkparam>
+			<hkparam name="enable">true</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7810" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">CheckStfCastingState_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#7811</hkparam>
+			<hkparam name="generator">#7901</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7811" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">CheckStfCastingState_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#7812</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7812" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
+				<hkobject>
+					<hkparam name="expression">CheckInStfCast if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7901" class="hkbStateMachine" signature="0x816c1dcb">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#1006</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">0</hkparam>
@@ -32440,8 +33702,8 @@
 			<hkparam name="startStateMode">START_STATE_MODE_DEFAULT</hkparam>
 			<hkparam name="selfTransitionMode">SELF_TRANSITION_MODE_NO_TRANSITION</hkparam>
 			<!-- isActive SERIALIZE_IGNORED -->
-			<hkparam name="states" numelements="1">
-				#7004
+			<hkparam name="states" numelements="2">
+				#7004 #9926
 			</hkparam>
 			<hkparam name="wildcardTransitions">null</hkparam>
 			<!-- stateIdToIndexMap SERIALIZE_IGNORED -->
@@ -32598,9 +33860,9 @@
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
 			<hkparam name="enterNotifyEvents">#7006</hkparam>
-			<hkparam name="exitNotifyEvents">#7007</hkparam>
-			<hkparam name="transitions">null</hkparam>
-			<hkparam name="generator">#7005</hkparam>
+			<hkparam name="exitNotifyEvents">null</hkparam>
+			<hkparam name="transitions">#9333</hkparam>
+			<hkparam name="generator">#0088</hkparam>
 			<hkparam name="name">DefaultStfCastingState</hkparam>
 			<hkparam name="stateId">0</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
@@ -33254,7 +34516,7 @@
 					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
 				</hkobject>
 				<hkobject>
-					<hkparam name="expression">XingStaffTrue if (BeginStaffCast == 1)</hkparam>
+					<hkparam name="expression">XingStaffTrue if (BeingStaffCast == 1)</hkparam>
 					<hkparam name="assignmentVariableIndex">-1</hkparam>
 					<hkparam name="assignmentEventIndex">-1</hkparam>
 					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
@@ -33262,7 +34524,7 @@
 					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
 				</hkobject>
 				<hkobject>
-					<hkparam name="expression">XingStaffFalse if (BeginStaffCast == 0)</hkparam>
+					<hkparam name="expression">XingStaffFalse if (BeingStaffCast == 0)</hkparam>
 					<hkparam name="assignmentVariableIndex">-1</hkparam>
 					<hkparam name="assignmentEventIndex">-1</hkparam>
 					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
@@ -33900,9 +35162,25 @@
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="pDefaultGenerator">#1020</hkparam>
+			<hkparam name="pDefaultGenerator">#0917</hkparam>
 			<hkparam name="iStateToSetAs">10</hkparam>
 			<hkparam name="iPriority">11</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9021" class="BSiStateTaggingGenerator" signature="0xf0826fc1">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StaffCasting_iStateGen</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="pDefaultGenerator">#9917</hkparam>
+			<hkparam name="iStateToSetAs">360</hkparam>
+			<hkparam name="iPriority">7</hkparam>
 		</hkobject>
 
 		<hkobject name="#1022" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
@@ -33960,6 +35238,21 @@
 			</hkparam>
 		</hkobject>
 		
+		<hkobject name="#7956" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="2">
+				<hkobject>
+					<hkparam name="id">4</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">5</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#1023" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -33970,7 +35263,7 @@
 			<hkparam name="enterNotifyEvents">null</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#1022</hkparam>
-			<hkparam name="generator">#1021</hkparam>
+			<hkparam name="generator">#1020</hkparam>
 			<hkparam name="name">CastingState</hkparam>
 			<hkparam name="stateId">1</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
@@ -41009,7 +42302,25 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="10">
-				#1096 #1096 #1096 #1096 #1096 #1096 #1096 #1096 #1351 #1096
+				#1332 #1332 #1332 #1332 #1332 #1332 #1332 #1332 #9332 #1332
+			</hkparam>
+			<hkparam name="selectedGeneratorIndex">0</hkparam>
+			<hkparam name="currentGeneratorIndex">0</hkparam>
+		</hkobject>
+		
+		<hkobject name="#9210" class="hkbManualSelectorGenerator" signature="0xd932fab8">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#1209</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">MLhCastLocomotionRHandSelectorMSG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="generators" numelements="10">
+				#1021 #1021 #1021 #1021 #1021 #1021 #1021 #1021 #9021 #1021
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
@@ -41478,12 +42789,30 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#1351 #1351 #1351 #1351 #1351 #1351 #1351 #1351 #1351 #1351 #1351 #1351
+				#9332 #9332 #9332 #9332 #9332 #9332 #9332 #9332 #9332 #9332 #9332 #9332
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#9212" class="hkbManualSelectorGenerator" signature="0xd932fab8">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#1211</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">StaffCastLocomotionRHandSelectorMSG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="generators" numelements="12">
+				#9021 #9021 #9021 #9021 #9021 #9021 #9021 #9021 #9021 #9021 #9021 #9021
+			</hkparam>
+			<hkparam name="selectedGeneratorIndex">0</hkparam>
+			<hkparam name="currentGeneratorIndex">0</hkparam>
+		</hkobject>
+		
 		<hkobject name="#1234" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -41494,7 +42823,7 @@
 			<hkparam name="enterNotifyEvents">null</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
-			<hkparam name="generator">#1351</hkparam>
+			<hkparam name="generator">#9332</hkparam>
 			<hkparam name="name">Staff_Direction_State</hkparam>
 			<hkparam name="stateId">9</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
@@ -41511,7 +42840,7 @@
 			<hkparam name="enterNotifyEvents">null</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
-			<hkparam name="generator">#1351</hkparam>
+			<hkparam name="generator">#9332</hkparam>
 			<hkparam name="name">DualStaffMagic_Direction_State</hkparam>
 			<hkparam name="stateId">8</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
@@ -41623,12 +42952,30 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#1096 #1096 #1096 #1096 #1096 #1096 #1096 #1096 #1237 #1096 #1096 #1096
+				#1332 #1332 #1332 #1332 #1332 #1332 #1332 #1332 #1237 #1332 #1332 #1332
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#9239" class="hkbManualSelectorGenerator" signature="0xd932fab8">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#1238</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">MagicCastLocomotionRHandSelectorMSG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="generators" numelements="12">
+				#1021 #1021 #1021 #1021 #1021 #1021 #1021 #1021 #9021 #1021 #1021 #1021
+			</hkparam>
+			<hkparam name="selectedGeneratorIndex">0</hkparam>
+			<hkparam name="currentGeneratorIndex">0</hkparam>
+		</hkobject>
+		
 		<hkobject name="#1240" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -41669,6 +43016,24 @@
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#9241" class="hkbManualSelectorGenerator" signature="0xd932fab8">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#1240</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">0</hkparam>
+			<hkparam name="name">MagicCastLocomotionLHandSelectorMSG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="generators" numelements="12">
+				#9239 #9239 #9239 #9239 #9239 #0150 #0150 #0150 #9212 #9210 #9239 #9239
+			</hkparam>
+			<hkparam name="selectedGeneratorIndex">0</hkparam>
+			<hkparam name="currentGeneratorIndex">0</hkparam>
+		</hkobject>
+		
 		<hkobject name="#1242" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -41686,6 +43051,23 @@
 			<hkparam name="enable">true</hkparam>
 		</hkobject>
 
+		<hkobject name="#9242" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="listeners" numelements="0"></hkparam>
+			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">null</hkparam>
+			<hkparam name="transitions">null</hkparam>
+			<hkparam name="generator">#9241</hkparam>
+			<hkparam name="name">MagicCast_Locomotion_3rdP</hkparam>
+			<hkparam name="stateId">0</hkparam>
+			<hkparam name="probability">1.000000</hkparam>
+			<hkparam name="enable">true</hkparam>
+		</hkobject>
+		
 		<hkobject name="#1243" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -43918,15 +45300,38 @@
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
-			<hkparam name="pDefaultGenerator">#1331</hkparam>
+			<hkparam name="pDefaultGenerator">#1096</hkparam>
 			<hkparam name="iStateToSetAs">9</hkparam>
 			<hkparam name="iPriority">5</hkparam>
 		</hkobject>
-
+		
+		<hkobject name="#9332" class="BSiStateTaggingGenerator" signature="0xf0826fc1">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StaffReady_iStateGen</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="pDefaultGenerator">#1351</hkparam>
+			<hkparam name="iStateToSetAs">35</hkparam>
+			<hkparam name="iPriority">6</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5343" class="hkbExpressionCondition" signature="0x1c3c1045">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expression">bPreparetoChant != 1</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+		</hkobject>
+		
 		<hkobject name="#1333" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="transitions" numelements="2">
+			<hkparam name="transitions" numelements="3">
 				<hkobject>
 					<hkparam name="triggerInterval">
 						<hkobject>
@@ -43945,13 +45350,13 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="transition">#0540</hkparam>
-					<hkparam name="condition">null</hkparam>
+					<hkparam name="condition">#5343</hkparam>
 					<hkparam name="eventId">84</hkparam>
 					<hkparam name="toStateId">1</hkparam>
 					<hkparam name="fromNestedStateId">0</hkparam>
 					<hkparam name="toNestedStateId">0</hkparam>
 					<hkparam name="priority">0</hkparam>
-					<hkparam name="flags">FLAG_DISABLE_CONDITION</hkparam>
+					<hkparam name="flags">0</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="triggerInterval">
@@ -43979,6 +45384,32 @@
 					<hkparam name="priority">0</hkparam>
 					<hkparam name="flags">FLAG_DISABLE_CONDITION</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#0540</hkparam>
+					<hkparam name="condition">null</hkparam>
+					<hkparam name="eventId">206</hkparam>
+					<hkparam name="toStateId">356</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">0</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">FLAG_DISABLE_CONDITION</hkparam>
+				</hkobject>
 			</hkparam>
 		</hkobject>
 
@@ -43992,7 +45423,7 @@
 			<hkparam name="enterNotifyEvents">null</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#1333</hkparam>
-			<hkparam name="generator">#1332</hkparam>
+			<hkparam name="generator">#1331</hkparam>
 			<hkparam name="name">MagicReadyState</hkparam>
 			<hkparam name="stateId">0</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
@@ -44052,8 +45483,8 @@
 			<hkparam name="startStateMode">START_STATE_MODE_DEFAULT</hkparam>
 			<hkparam name="selfTransitionMode">SELF_TRANSITION_MODE_NO_TRANSITION</hkparam>
 			<!-- isActive SERIALIZE_IGNORED -->
-			<hkparam name="states" numelements="2">
-				#1334 #1023
+			<hkparam name="states" numelements="3">
+				#1334 #1023 #5600
 			</hkparam>
 			<hkparam name="wildcardTransitions">null</hkparam>
 			<!-- stateIdToIndexMap SERIALIZE_IGNORED -->
@@ -44070,6 +45501,201 @@
 			<!-- sCurrentStateIndexAndEntered SERIALIZE_IGNORED -->
 		</hkobject>
 
+		<hkobject name="#5600" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="listeners" numelements="0"></hkparam>
+			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="exitNotifyEvents">null</hkparam>
+			<hkparam name="transitions">#5601</hkparam>
+			<hkparam name="generator">#5602</hkparam>
+			<hkparam name="name">XingChantState</hkparam>
+			<hkparam name="stateId">356</hkparam>
+			<hkparam name="probability">1.000000</hkparam>
+			<hkparam name="enable">true</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5601" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="transitions" numelements="3">
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#0082</hkparam>
+					<hkparam name="condition">null</hkparam>
+					<hkparam name="eventId">205</hkparam>
+					<hkparam name="toStateId">0</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">0</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">FLAG_DISABLE_CONDITION</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#0082</hkparam>
+					<hkparam name="condition">null</hkparam>
+					<hkparam name="eventId">215</hkparam>
+					<hkparam name="toStateId">0</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">0</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">FLAG_DISABLE_CONDITION</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="triggerInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="initiateInterval">
+						<hkobject>
+							<hkparam name="enterEventId">-1</hkparam>
+							<hkparam name="exitEventId">-1</hkparam>
+							<hkparam name="enterTime">0.000000</hkparam>
+							<hkparam name="exitTime">0.000000</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="transition">#0082</hkparam>
+					<hkparam name="condition">null</hkparam>
+					<hkparam name="eventId">213</hkparam>
+					<hkparam name="toStateId">0</hkparam>
+					<hkparam name="fromNestedStateId">0</hkparam>
+					<hkparam name="toNestedStateId">0</hkparam>
+					<hkparam name="priority">0</hkparam>
+					<hkparam name="flags">FLAG_DISABLE_CONDITION</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5602" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">ChantState_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#5603</hkparam>
+			<hkparam name="generator">#0272</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5603" class="hkbModifierList" signature="0xa4180ca1">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">Casting_ML</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifiers" numelements="1">
+				#5604
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5604" class="BSIsActiveModifier" signature="0xb0fde45a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#5605</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">InChantState_IsActiveMod</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="bIsActive0">false</hkparam>
+			<hkparam name="bInvertActive0">false</hkparam>
+			<hkparam name="bIsActive1">false</hkparam>
+			<hkparam name="bInvertActive1">false</hkparam>
+			<hkparam name="bIsActive2">false</hkparam>
+			<hkparam name="bInvertActive2">false</hkparam>
+			<hkparam name="bIsActive3">false</hkparam>
+			<hkparam name="bInvertActive3">false</hkparam>
+			<hkparam name="bIsActive4">false</hkparam>
+			<hkparam name="bInvertActive4">false</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5605" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="2">
+				<hkobject>
+					<hkparam name="memberPath">bIsActive0</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">98</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+				<hkobject>
+					<hkparam name="memberPath">bIsActive1</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">82</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
 		<hkobject name="#1337" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -44220,11 +45846,152 @@
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="modifiers" numelements="16">
-				#1340 #1338 #6998 #9121 #9770 #9720 #9301 #9302 #9701 #9704 #8810 #9707 #9901 #9904 #8801 #8804
+			<hkparam name="modifiers" numelements="18">
+				#1340 #1338 #6998 #9121 #9770 #9720 #9301 #9302 #9701 #9704 #8810 #9707 #9901 #9904 #8801 #8804 #7981 #7984
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#7981" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StandCastOn_EDM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#7919</hkparam>
+			<hkparam name="activateEventId">217</hkparam>
+			<hkparam name="deactivateEventId">218</hkparam>
+			<hkparam name="activeByDefault">false</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7919" class="hkbModifierList" signature="0xa4180ca1">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StandCast_ML</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifiers" numelements="2">
+				#3001 #7982
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7982" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">StandCastOn_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#7983</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7983" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
+				<hkobject>
+					<hkparam name="expression">moveStop if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ONCE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7984" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StandFocusOn_EDM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#7920</hkparam>
+			<hkparam name="activateEventId">219</hkparam>
+			<hkparam name="deactivateEventId">220</hkparam>
+			<hkparam name="activeByDefault">false</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7920" class="hkbModifierList" signature="0xa4180ca1">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StandCast_ML</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifiers" numelements="2">
+				#8301 #7985
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7985" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">StandFocusOn_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#7986</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7986" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
+				<hkobject>
+					<hkparam name="expression">moveStop if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ONCE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
 		
 		<hkobject name="#9301" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->

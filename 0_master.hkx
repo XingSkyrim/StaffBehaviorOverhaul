@@ -6,7 +6,7 @@
 		<hkobject name="#0106" class="hkbBehaviorGraphStringData" signature="0xc713064e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="eventNames" numelements="1239">
+			<hkparam name="eventNames" numelements="1252">
 				<hkcstring>FootLeft</hkcstring>
 				<hkcstring>FootRight</hkcstring>
 				<hkcstring>WeapEquip</hkcstring>
@@ -1241,14 +1241,27 @@
 				<hkcstring>MLh_FocusStart</hkcstring>
 				<hkcstring>MLh_FocusRelease</hkcstring>
 				<hkcstring>StartPara</hkcstring>
-				<hkcstring>YesIsPara</hkcstring>
+				<hkcstring>DoChantMath</hkcstring>
 				<hkcstring>ToGripStaff</hkcstring>
 				<hkcstring>ToGripMelee</hkcstring>
+				<hkcstring>QuitChant</hkcstring>
 				<hkcstring>ChantStart</hkcstring>
-				<hkcstring>YesIsChantStart</hkcstring>
+				<hkcstring>ChantStop</hkcstring>
+				<hkcstring>WbuttonInput</hkcstring>
+				<hkcstring>AbuttonInput</hkcstring>
+				<hkcstring>SbuttonInput</hkcstring>
+				<hkcstring>DbuttonInput</hkcstring>
+				<hkcstring>ChantStore</hkcstring>
+				<hkcstring>FireChant</hkcstring>
+				<hkcstring>IceChant</hkcstring>
+				<hkcstring>ThunderChant</hkcstring>
+				<hkcstring>OpenMagicBook</hkcstring>
+				<hkcstring>CloseMagicBook</hkcstring>
+				<hkcstring>ChantKeyInput</hkcstring>
+				<hkcstring>ChantKeyRelease</hkcstring>
 			</hkparam>
 			<hkparam name="attributeNames" numelements="0"></hkparam>
-			<hkparam name="variableNames" numelements="235">
+			<hkparam name="variableNames" numelements="241">
 				<hkcstring>Speed</hkcstring>
 				<hkcstring>Direction</hkcstring>
 				<hkcstring>TurnDelta</hkcstring>
@@ -1484,8 +1497,14 @@
 				<hkcstring>bIframeActive</hkcstring>
 				<hkcstring>bInIframe</hkcstring>
 				<hkcstring>TestChant</hkcstring>
+				<hkcstring>iState_StaffReady</hkcstring>
+				<hkcstring>iState_StaffCasting</hkcstring>
+				<hkcstring>bPreparetoChant</hkcstring>
+				<hkcstring>InChantState</hkcstring>
+				<hkcstring>bIsInMagic</hkcstring>
+				<hkcstring>bNotPreparetoChant</hkcstring>
 			</hkparam>
-			<hkparam name="characterPropertyNames" numelements="15">
+			<hkparam name="characterPropertyNames" numelements="16">
 				<hkcstring>ShieldOnly</hkcstring>
 				<hkcstring>LHStaffOnly</hkcstring>
 				<hkcstring>RHStaffOnly</hkcstring>
@@ -1501,13 +1520,14 @@
 				<hkcstring>Arms</hkcstring>
 				<hkcstring>Quiver</hkcstring>
 				<hkcstring>RightHandAndQuiver</hkcstring>
+				<hkcstring>StaffMagicNode</hkcstring>
 			</hkparam>
 		</hkobject>
 
 		<hkobject name="#0107" class="hkbVariableValueSet" signature="0x27812d8d">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="wordVariableValues" numelements="235">
+			<hkparam name="wordVariableValues" numelements="241">
 				<hkobject>
 					<hkparam name="value">0</hkparam>
 				</hkobject>
@@ -2213,6 +2233,24 @@
 				<hkobject>
 					<hkparam name="value">0</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="value">35</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">360</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
 			</hkparam>
 			<hkparam name="quadVariableValues" numelements="4">
 				(0.000000 0.000000 0.000000 0.000000)
@@ -2227,7 +2265,7 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="attributeDefaults" numelements="0"></hkparam>
-			<hkparam name="variableInfos" numelements="235">
+			<hkparam name="variableInfos" numelements="241">
 				<hkobject>
 					<hkparam name="role">
 						<hkobject>
@@ -4343,8 +4381,62 @@
 					</hkparam>
 					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_INT32</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_INT32</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
 			</hkparam>
-			<hkparam name="characterPropertyInfos" numelements="15">
+			<hkparam name="characterPropertyInfos" numelements="16">
 				<hkobject>
 					<hkparam name="role">
 						<hkobject>
@@ -4480,8 +4572,17 @@
 					</hkparam>
 					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
+				</hkobject>
 			</hkparam>
-			<hkparam name="eventInfos" numelements="1239">
+			<hkparam name="eventInfos" numelements="1252">
 				<hkobject>
 					<hkparam name="flags">FLAG_SYNC_POINT</hkparam>
 				</hkobject>
@@ -6218,6 +6319,45 @@
 				</hkobject>
 				<hkobject>
 					<hkparam name="flags">FLAG_SYNC_POINT</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="flags">0</hkparam>
@@ -19120,6 +19260,8 @@
 			</hkparam>
 		</hkobject>
 
+		
+		
 		<hkobject name="#0480" class="hkbModifierGenerator" signature="0x1f81fae6">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -41679,6 +41821,8 @@
 			</hkparam>
 		</hkobject>
 
+		
+		
 		<hkobject name="#0862" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -41689,13 +41833,75 @@
 			<hkparam name="enterNotifyEvents">#1257</hkparam>
 			<hkparam name="exitNotifyEvents">#1256</hkparam>
 			<hkparam name="transitions">#1255</hkparam>
-			<hkparam name="generator">#0863</hkparam>
+			<hkparam name="generator">#8583</hkparam>
 			<hkparam name="name">Magic_Behavior_State</hkparam>
 			<hkparam name="stateId">2</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
 			<hkparam name="enable">true</hkparam>
 		</hkobject>
 
+		<hkobject name="#8583" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">Magic_Behavior_State_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#8584</hkparam>
+			<hkparam name="generator">#0863</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8584" class="BSIsActiveModifier" signature="0xb0fde45a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#8585</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">bIsInMagic_IsActiveMod</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="bIsActive0">false</hkparam>
+			<hkparam name="bInvertActive0">false</hkparam>
+			<hkparam name="bIsActive1">false</hkparam>
+			<hkparam name="bInvertActive1">false</hkparam>
+			<hkparam name="bIsActive2">false</hkparam>
+			<hkparam name="bInvertActive2">false</hkparam>
+			<hkparam name="bIsActive3">false</hkparam>
+			<hkparam name="bInvertActive3">false</hkparam>
+			<hkparam name="bIsActive4">false</hkparam>
+			<hkparam name="bInvertActive4">false</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8585" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">bIsActive0</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">239</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
 		<hkobject name="#1264" class="hkbBoneWeightArray" signature="0xcd902b77">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -76836,32 +77042,167 @@
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="modifiers" numelements="3">
-				#6977 #7977 #7981
+			<hkparam name="modifiers" numelements="11">
+				#5977 #6977 #7977 #7981 #7983 #8977 #8980 #8983 #8986 #8989 #8992
 			</hkparam>
 		</hkobject>
 		
-		<hkobject name="#7982" class="hkbVariableBindingSet" signature="0x338ad4ff">
+		<hkobject name="#5977" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="bindings" numelements="1">
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">PrepareChantSystem_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#5978</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+				
+		<hkobject name="#5978" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
 				<hkobject>
-					<hkparam name="memberPath">bVariableToTest1</hkparam>
-					<!-- memberClass SERIALIZE_IGNORED -->
-					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
-					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
-					<!-- rootVariableIndex SERIALIZE_IGNORED -->
-					<hkparam name="variableIndex">234</hkparam>
-					<hkparam name="bitIndex">-1</hkparam>
-					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
-					<!-- memberType SERIALIZE_IGNORED -->
-					<!-- variableType SERIALIZE_IGNORED -->
-					<!-- flags SERIALIZE_IGNORED -->
+					<hkparam name="expression">bNotPreparetoChant = !bPreparetoChant </hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
 				</hkobject>
 			</hkparam>
-			<hkparam name="indexOfBindingToEnable">-1</hkparam>
-			<!-- hasOutputBinding SERIALIZE_IGNORED -->
 		</hkobject>
+		
+		<hkobject name="#6977" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StartPara_PrepareChantToggleOn_EDM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#6978</hkparam>
+			<hkparam name="activateEventId">1233</hkparam>
+			<hkparam name="deactivateEventId">1234</hkparam>
+			<hkparam name="activeByDefault">false</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#6978" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">PrepareChantToggleOn_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#6979</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#6979" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="2">
+				<hkobject>
+					<hkparam name="expression">bPreparetoChant = (1*bIsInMagic) * bNotPreparetoChant</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+				<hkobject>
+					<hkparam name="expression">DoChantMath if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#7977" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">QuitChant_EDM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#7978</hkparam>
+			<hkparam name="activateEventId">1237</hkparam>
+			<hkparam name="deactivateEventId">1249</hkparam>
+			<hkparam name="activeByDefault">false</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7978" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">QuitChant_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#7979</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#7979" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="2">
+				<hkobject>
+					<hkparam name="expression">bNotPreparetoChant = 1</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+				<hkobject>
+					<hkparam name="expression">CloseMagicBook if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		
 
 		<hkobject name="#7981" class="BSEventOnFalseToTrueModifier" signature="0x81d0777a">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
@@ -76870,7 +77211,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">2</hkparam>
-			<hkparam name="name">TestChant_EventOnFalseToTrueMod</hkparam>
+			<hkparam name="name">OpenMagicBook_EventOnFalseToTrueMod</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
@@ -76880,7 +77221,7 @@
 			<hkparam name="bVariableToTest1">false</hkparam>
 			<hkparam name="EventToSend1">
 				<hkobject>
-					<hkparam name="id">1238</hkparam>
+					<hkparam name="id">1248</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
 			</hkparam>
@@ -76905,50 +77246,139 @@
 			<!-- bSlot3ActivatedLastFrame SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#7977" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+		
+		<hkobject name="#7982" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">bVariableToTest1</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">237</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		
+		<hkobject name="#7983" class="BSEventOnFalseToTrueModifier" signature="0x81d0777a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#7984</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">CloseMagicBook_EventOnFalseToTrueMod</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="bEnableEvent1">true</hkparam>
+			<hkparam name="bVariableToTest1">false</hkparam>
+			<hkparam name="EventToSend1">
+				<hkobject>
+					<hkparam name="id">1249</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+			<hkparam name="bEnableEvent2">false</hkparam>
+			<hkparam name="bVariableToTest2">false</hkparam>
+			<hkparam name="EventToSend2">
+				<hkobject>
+					<hkparam name="id">-1</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+			<hkparam name="bEnableEvent3">false</hkparam>
+			<hkparam name="bVariableToTest3">false</hkparam>
+			<hkparam name="EventToSend3">
+				<hkobject>
+					<hkparam name="id">-1</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+			<!-- bSlot1ActivatedLastFrame SERIALIZE_IGNORED -->
+			<!-- bSlot2ActivatedLastFrame SERIALIZE_IGNORED -->
+			<!-- bSlot3ActivatedLastFrame SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		
+		<hkobject name="#7984" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">bVariableToTest1</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">240</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8977" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">1</hkparam>
-			<hkparam name="name">CheckChantEDM</hkparam>
+			<hkparam name="name">CheckChantKeyInput_EDM</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="modifier">#7978</hkparam>
-			<hkparam name="activateEventId">1237</hkparam>
+			<hkparam name="modifier">#8978</hkparam>
+			<hkparam name="activateEventId">1250</hkparam>
 			<hkparam name="deactivateEventId">1238</hkparam>
 			<hkparam name="activeByDefault">false</hkparam>
 			<!-- isActive SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#7978" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+		<hkobject name="#8978" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">2</hkparam>
-			<hkparam name="name">CheckChant_EEM</hkparam>
+			<hkparam name="name">CheckChantKeyInput_EEM</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="expressions">#7979</hkparam>
+			<hkparam name="expressions">#8979</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 			<!-- internalExpressionsData SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#7979" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+		<hkobject name="#8979" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="expressionsData" numelements="1">
 				<hkobject>
-					<hkparam name="expression">YesIsChantStart if(1)</hkparam>
+					<hkparam name="expression">ChantStart if(1)</hkparam>
 					<hkparam name="assignmentVariableIndex">-1</hkparam>
 					<hkparam name="assignmentEventIndex">-1</hkparam>
 					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
@@ -76959,50 +77389,50 @@
 		</hkobject>
 		
 		
-		<hkobject name="#6977" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+		<hkobject name="#8980" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">1</hkparam>
-			<hkparam name="name">CheckStartParaEDM</hkparam>
+			<hkparam name="name">CheckChantKeyRelease_EDM</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="modifier">#6978</hkparam>
-			<hkparam name="activateEventId">1233</hkparam>
-			<hkparam name="deactivateEventId">1234</hkparam>
+			<hkparam name="modifier">#8981</hkparam>
+			<hkparam name="activateEventId">1251</hkparam>
+			<hkparam name="deactivateEventId">1239</hkparam>
 			<hkparam name="activeByDefault">false</hkparam>
 			<!-- isActive SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#6978" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+		<hkobject name="#8981" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="userData">2</hkparam>
-			<hkparam name="name">CheckStartPara_EEM</hkparam>
+			<hkparam name="name">CheckChantKeyRelease_EEM</hkparam>
 			<!-- id SERIALIZE_IGNORED -->
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
-			<hkparam name="expressions">#6979</hkparam>
+			<hkparam name="expressions">#8982</hkparam>
 			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
 			<!-- internalExpressionsData SERIALIZE_IGNORED -->
 		</hkobject>
 		
-		<hkobject name="#6979" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+		<hkobject name="#8982" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="expressionsData" numelements="1">
 				<hkobject>
-					<hkparam name="expression">YesIsPara if(1)</hkparam>
+					<hkparam name="expression">ChantStop if(1)</hkparam>
 					<hkparam name="assignmentVariableIndex">-1</hkparam>
 					<hkparam name="assignmentEventIndex">-1</hkparam>
 					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
@@ -77012,7 +77442,229 @@
 			</hkparam>
 		</hkobject>
 		
-			
+		<hkobject name="#8983" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">CheckWInput_EDM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#8984</hkparam>
+			<hkparam name="activateEventId">1240</hkparam>
+			<hkparam name="deactivateEventId">1244</hkparam>
+			<hkparam name="activeByDefault">false</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8984" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">CheckWInput_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#8985</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8985" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
+				<hkobject>
+					<hkparam name="expression">ChantStore if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8986" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">CheckAInput_EDM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#8987</hkparam>
+			<hkparam name="activateEventId">1241</hkparam>
+			<hkparam name="deactivateEventId">1245</hkparam>
+			<hkparam name="activeByDefault">false</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8987" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">CheckAInput_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#8988</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8988" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
+				<hkobject>
+					<hkparam name="expression">FireChant if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		<hkobject name="#8989" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">CheckSInput_EDM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#8990</hkparam>
+			<hkparam name="activateEventId">1242</hkparam>
+			<hkparam name="deactivateEventId">1246</hkparam>
+			<hkparam name="activeByDefault">false</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8990" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">CheckSInput_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#8991</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8991" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
+				<hkobject>
+					<hkparam name="expression">IceChant if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		
+		
+		<hkobject name="#8992" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">CheckDInput_EDM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#8993</hkparam>
+			<hkparam name="activateEventId">1243</hkparam>
+			<hkparam name="deactivateEventId">1247</hkparam>
+			<hkparam name="activeByDefault">false</hkparam>
+			<!-- isActive SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8993" class="hkbEvaluateExpressionModifier" signature="0xf900f6be">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">CheckDInput_EEM</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="expressions">#8994</hkparam>
+			<!-- compiledExpressionSet SERIALIZE_IGNORED -->
+			<!-- internalExpressionsData SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#8994" class="hkbExpressionDataArray" signature="0x4b9ee1a2">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="expressionsData" numelements="1">
+				<hkobject>
+					<hkparam name="expression">ThunderChant if(1)</hkparam>
+					<hkparam name="assignmentVariableIndex">-1</hkparam>
+					<hkparam name="assignmentEventIndex">-1</hkparam>
+					<hkparam name="eventMode">EVENT_MODE_SEND_ON_FALSE_TO_TRUE</hkparam>
+					<!-- raisedEvent SERIALIZE_IGNORED -->
+					<!-- wasTrueInPreviousFrame SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		<hkobject name="#9301" class="hkbEventDrivenModifier" signature="0x7ed3f44e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
