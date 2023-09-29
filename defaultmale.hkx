@@ -23,7 +23,7 @@
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="deformableSkinNames" numelements="0"></hkparam>
 			<hkparam name="rigidSkinNames" numelements="0"></hkparam>
-			<hkparam name="animationNames" numelements="1657">
+			<hkparam name="animationNames" numelements="1674">
 				<hkcstring>Animations\1HM_1stP_Run.hkx</hkcstring>
 				<hkcstring>Animations\1hm_1stP_Walk.hkx</hkcstring>
 				<hkcstring>Animations\1HM_AttackForwardSprint.hkx</hkcstring>
@@ -1681,6 +1681,23 @@
 				<hkcstring>Animations\WW_Stage8.hkx</hkcstring>
 				<hkcstring>Animations\WW_Stage9.hkx</hkcstring>
 				<hkcstring>Animations\Stf_Unequip.hkx</hkcstring>
+				<hkcstring>Animations\Stf_RunBackward.hkx</hkcstring>
+				<hkcstring>Animations\Stf_RunBackwardLeft.hkx</hkcstring>
+				<hkcstring>Animations\Stf_RunBackwardRight.hkx</hkcstring>
+				<hkcstring>Animations\Stf_RunForward.HKX</hkcstring>
+				<hkcstring>Animations\Stf_RunForwardLeft.HKX</hkcstring>
+				<hkcstring>Animations\Stf_RunForwardRight.HKX</hkcstring>
+				<hkcstring>Animations\Stf_RunLeft.HKX</hkcstring>
+				<hkcstring>Animations\Stf_RunRight.HKX</hkcstring>
+				<hkcstring>Animations\Stf_WalkBackward.hkx</hkcstring>
+				<hkcstring>Animations\Stf_WalkBackwardLeft.hkx</hkcstring>
+				<hkcstring>Animations\Stf_WalkBackwardRight.hkx</hkcstring>
+				<hkcstring>Animations\Stf_WalkForward.hkx</hkcstring>
+				<hkcstring>Animations\Stf_WalkForwardLeft.hkx</hkcstring>
+				<hkcstring>Animations\Stf_WalkForwardRight.hkx</hkcstring>
+				<hkcstring>Animations\Stf_WalkLeft.hkx</hkcstring>
+				<hkcstring>Animations\Stf_WalkRight.hkx</hkcstring>
+				<hkcstring>Animations\Staffright_Unequip.hkx</hkcstring>
 			</hkparam>
 			<hkparam name="animationFilenames" numelements="0"></hkparam>
 			<hkparam name="characterPropertyNames" numelements="39">

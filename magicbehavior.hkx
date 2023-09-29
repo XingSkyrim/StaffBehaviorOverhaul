@@ -33255,7 +33255,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="10">
-				#1096 #1096 #1096 #1096 #1096 #1096 #1096 #1096 #1095 #1096
+				#1096 #1096 #1096 #1096 #1096 #1096 #1096 #1096 #1351 #1096
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
@@ -33513,7 +33513,7 @@
 			<hkparam name="variableBindingSet">null</hkparam>
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
-			<hkparam name="generator">#1351</hkparam>
+			<hkparam name="generator">#1096</hkparam>
 			<hkparam name="boneWeights">#1224</hkparam>
 			<hkparam name="weight">1.000000</hkparam>
 			<hkparam name="worldFromModelWeight">1.000000</hkparam>
@@ -33724,7 +33724,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#1213 #1213 #1213 #1213 #1213 #1213 #1213 #1213 #1225 #1213 #1213 #1213
+				#1351 #1213 #1213 #1213 #1213 #1213 #1213 #1213 #1351 #1213 #1213 #1213
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
@@ -33740,7 +33740,7 @@
 			<hkparam name="enterNotifyEvents">null</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
-			<hkparam name="generator">#1213</hkparam>
+			<hkparam name="generator">#1351</hkparam>
 			<hkparam name="name">Staff_Direction_State</hkparam>
 			<hkparam name="stateId">9</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
@@ -33757,7 +33757,7 @@
 			<hkparam name="enterNotifyEvents">null</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
-			<hkparam name="generator">#1225</hkparam>
+			<hkparam name="generator">#1351</hkparam>
 			<hkparam name="name">DualStaffMagic_Direction_State</hkparam>
 			<hkparam name="stateId">8</hkparam>
 			<hkparam name="probability">1.000000</hkparam>

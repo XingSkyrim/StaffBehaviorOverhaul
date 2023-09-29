@@ -10372,7 +10372,7 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0325 #0325 #0325 #0325 #0325 #0325 #0325 #0325 #0336 #0325 #0325 #0325
+				#0325 #0325 #0325 #0325 #0325 #0325 #0325 #0325 #0371 #0325 #0325 #0325
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
@@ -10388,7 +10388,7 @@
 			<hkparam name="enterNotifyEvents">null</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
-			<hkparam name="generator">#0325</hkparam>
+			<hkparam name="generator">#0371</hkparam>
 			<hkparam name="name">Staff_Direction_State</hkparam>
 			<hkparam name="stateId">9</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
@@ -10405,7 +10405,7 @@
 			<hkparam name="enterNotifyEvents">null</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
-			<hkparam name="generator">#0336</hkparam>
+			<hkparam name="generator">#0371</hkparam>
 			<hkparam name="name">DualStaffMagic_Direction_State</hkparam>
 			<hkparam name="stateId">8</hkparam>
 			<hkparam name="probability">1.000000</hkparam>
