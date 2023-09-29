@@ -6,7 +6,7 @@
 		<hkobject name="#0077" class="hkbBehaviorGraphStringData" signature="0xc713064e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="eventNames" numelements="109">
+			<hkparam name="eventNames" numelements="126">
 				<hkcstring>staggerStop</hkcstring>
 				<hkcstring>MRh_Equipped_Event</hkcstring>
 				<hkcstring>shoutStop</hkcstring>
@@ -116,9 +116,26 @@
 				<hkcstring>EndAnimatedCamera</hkcstring>
 				<hkcstring>HeadTrackingOn</hkcstring>
 				<hkcstring>HeadTrackingOff</hkcstring>
+				<hkcstring>AiStfRightChargeLoop</hkcstring>
+				<hkcstring>AiStfRightReadyLoop</hkcstring>
+				<hkcstring>AiStfRightRelease</hkcstring>
+				<hkcstring>AiStfRightPreCharge</hkcstring>
+				<hkcstring>ACStfRightAimConLoop</hkcstring>
+				<hkcstring>ACStfRightPreCharge</hkcstring>
+				<hkcstring>ACStfRightChargeLoop</hkcstring>
+				<hkcstring>ACStfRightPreAimedCon</hkcstring>
+				<hkcstring>AiStfPreReady</hkcstring>
+				<hkcstring>AiStfChargeLoop</hkcstring>
+				<hkcstring>AiStfReadyLoop</hkcstring>
+				<hkcstring>AiStfRelease</hkcstring>
+				<hkcstring>AiStfPreCharge</hkcstring>
+				<hkcstring>ACStfAimConLoop</hkcstring>
+				<hkcstring>ACStfPreCharge</hkcstring>
+				<hkcstring>ACStfChargeLoop</hkcstring>
+				<hkcstring>ACStfPreAimedCon</hkcstring>
 			</hkparam>
 			<hkparam name="attributeNames" numelements="0"></hkparam>
-			<hkparam name="variableNames" numelements="81">
+			<hkparam name="variableNames" numelements="83">
 				<hkcstring>blendDefault</hkcstring>
 				<hkcstring>blendMove1stP</hkcstring>
 				<hkcstring>blendMoveStop</hkcstring>
@@ -200,6 +217,8 @@
 				<hkcstring>BowAimOffsetHeading</hkcstring>
 				<hkcstring>BowAimOffsetPitch</hkcstring>
 				<hkcstring>bVoiceReady</hkcstring>
+				<hkcstring>bAllowRotation</hkcstring>
+				<hkcstring>bAnimationDriven</hkcstring>
 			</hkparam>
 			<hkparam name="characterPropertyNames" numelements="7">
 				<hkcstring>LeftArm</hkcstring>
@@ -215,7 +234,7 @@
 		<hkobject name="#0078" class="hkbVariableValueSet" signature="0x27812d8d">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="wordVariableValues" numelements="81">
+			<hkparam name="wordVariableValues" numelements="83">
 				<hkobject>
 					<hkparam name="value">1045220557</hkparam>
 				</hkobject>
@@ -459,6 +478,12 @@
 				<hkobject>
 					<hkparam name="value">0</hkparam>
 				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="value">0</hkparam>
+				</hkobject>
 			</hkparam>
 			<hkparam name="quadVariableValues" numelements="0"></hkparam>
 			<hkparam name="variantVariableValues" numelements="0"></hkparam>
@@ -468,7 +493,7 @@
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="attributeDefaults" numelements="0"></hkparam>
-			<hkparam name="variableInfos" numelements="81">
+			<hkparam name="variableInfos" numelements="83">
 				<hkobject>
 					<hkparam name="role">
 						<hkobject>
@@ -1188,6 +1213,24 @@
 						</hkobject>
 					</hkparam>
 					<hkparam name="type">VARIABLE_TYPE_REAL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="role">
+						<hkobject>
+							<hkparam name="role">ROLE_DEFAULT</hkparam>
+							<hkparam name="flags">0</hkparam>
+						</hkobject>
+					</hkparam>
+					<hkparam name="type">VARIABLE_TYPE_BOOL</hkparam>
 				</hkobject>
 				<hkobject>
 					<hkparam name="role">
@@ -1264,7 +1307,7 @@
 					<hkparam name="type">VARIABLE_TYPE_POINTER</hkparam>
 				</hkobject>
 			</hkparam>
-			<hkparam name="eventInfos" numelements="109">
+			<hkparam name="eventInfos" numelements="126">
 				<hkobject>
 					<hkparam name="flags">FLAG_SYNC_POINT</hkparam>
 				</hkobject>
@@ -1572,6 +1615,57 @@
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
 				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+					<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+						<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+					<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="flags">0</hkparam>
+				</hkobject>
+					<hkobject>
 					<hkparam name="flags">0</hkparam>
 				</hkobject>
 					<hkobject>
@@ -3354,12 +3448,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0153 #0151 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3015 #0151 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3015" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfR_PreAimedCon_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0153</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0157" class="hkbBlendingTransitionEffect" signature="0xfd8584fe">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -3421,6 +3530,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5006" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">116</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0148" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -3428,7 +3548,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5006</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0156</hkparam>
 			<hkparam name="generator">#0149</hkparam>
@@ -3478,6 +3598,17 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
+		<hkobject name="#5005" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">115</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0161" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -3485,7 +3616,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5005</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
 			<hkparam name="generator">#0162</hkparam>
@@ -3587,6 +3718,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5004" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">114</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0163" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -3594,7 +3736,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5004</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0166</hkparam>
 			<hkparam name="generator">#0164</hkparam>
@@ -3687,12 +3829,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0160 #0099 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3014 #0099 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3014" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfR_AimedConCharge_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0160</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0168" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -4026,18 +4183,37 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0180 #0171 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3013 #0171 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3013" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfR_AimedCon_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0180</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0182" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="1">
+			<hkparam name="events" numelements="2">
 				<hkobject>
 					<hkparam name="id">26</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">113</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
 			</hkparam>
@@ -4365,12 +4541,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0194 #0194 #0194 #0194 #0194 #0194 #0194 #0194 #0164 #0194 #0150 #0150
+				#0194 #0194 #0194 #0194 #0194 #0194 #0194 #0194 #3012 #0194 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3012" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfR_PreCharge_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0164</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0197" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -4404,6 +4595,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5003" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">112</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0192" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -4411,7 +4613,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5003</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0197</hkparam>
 			<hkparam name="generator">#0193</hkparam>
@@ -4645,12 +4847,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0200 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0202 #0200 #0150 #0150
+				#0200 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3011 #0200 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3011" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfR_AimedRelease_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0202</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0207" class="hkbVariableBindingSet" signature="0x338ad4ff">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -4734,6 +4951,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5002" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">111</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0198" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -4741,7 +4969,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5002</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0205</hkparam>
 			<hkparam name="generator">#0199</hkparam>
@@ -4865,12 +5093,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0210 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0211 #0210 #0150 #0150
+				#0210 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3010 #0210 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3010" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfR_ReadyLoop_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0211</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0213" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -4904,6 +5147,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5001" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">110</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0208" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -4911,7 +5165,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5001</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0213</hkparam>
 			<hkparam name="generator">#0209</hkparam>
@@ -4955,12 +5209,85 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0194 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0162 #0099 #0150 #0150
+				#0194 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3000 #0099 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3000" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfR_ChargeLoop_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0162</hkparam>
+		</hkobject>
+	
+		<hkobject name="#3001" class="BSIsActiveModifier" signature="0xb0fde45a">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">#3002</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">2</hkparam>
+			<hkparam name="name">bAllowRotation_IsActive</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="enable">true</hkparam>
+			<!-- padModifier SERIALIZE_IGNORED -->
+			<hkparam name="bIsActive0">false</hkparam>
+			<hkparam name="bInvertActive0">false</hkparam>
+			<hkparam name="bIsActive1">false</hkparam>
+			<hkparam name="bInvertActive1">false</hkparam>
+			<hkparam name="bIsActive2">false</hkparam>
+			<hkparam name="bInvertActive2">false</hkparam>
+			<hkparam name="bIsActive3">false</hkparam>
+			<hkparam name="bInvertActive3">false</hkparam>
+			<hkparam name="bIsActive4">false</hkparam>
+			<hkparam name="bInvertActive4">false</hkparam>
+		</hkobject>
+		
+		<hkobject name="#3002" class="hkbVariableBindingSet" signature="0x338ad4ff">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="bindings" numelements="1">
+				<hkobject>
+					<hkparam name="memberPath">bIsActive0</hkparam>
+					<!-- memberClass SERIALIZE_IGNORED -->
+					<!-- offsetInObjectPlusOne SERIALIZE_IGNORED -->
+					<!-- offsetInArrayPlusOne SERIALIZE_IGNORED -->
+					<!-- rootVariableIndex SERIALIZE_IGNORED -->
+					<hkparam name="variableIndex">81</hkparam>
+					<hkparam name="bitIndex">-1</hkparam>
+					<hkparam name="bindingType">BINDING_TYPE_VARIABLE</hkparam>
+					<!-- memberType SERIALIZE_IGNORED -->
+					<!-- variableType SERIALIZE_IGNORED -->
+					<!-- flags SERIALIZE_IGNORED -->
+				</hkobject>
+			</hkparam>
+			<hkparam name="indexOfBindingToEnable">-1</hkparam>
+			<!-- hasOutputBinding SERIALIZE_IGNORED -->
+		</hkobject>
+		
+		<hkobject name="#5000" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">109</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0214" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -4968,7 +5295,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5000</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
 			<hkparam name="generator">#0215</hkparam>
@@ -11855,12 +12182,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0460 #0458 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3107 #0458 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3107" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfL_PreAimedCon_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0460</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0463" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -11894,6 +12236,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5014" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">125</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0456" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -11901,7 +12254,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5014</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0463</hkparam>
 			<hkparam name="generator">#0457</hkparam>
@@ -11951,6 +12304,17 @@
 			<!-- pingPongBackward SERIALIZE_IGNORED -->
 		</hkobject>
 
+		<hkobject name="#5013" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">124</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0467" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -11958,7 +12322,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5013</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
 			<hkparam name="generator">#0468</hkparam>
@@ -12060,6 +12424,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5012" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">123</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0469" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -12067,7 +12442,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5012</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0472</hkparam>
 			<hkparam name="generator">#0470</hkparam>
@@ -12160,12 +12535,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0466 #0397 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3106 #0397 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3106" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfL_AimedConCharge_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0466</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0474" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -12459,18 +12849,37 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0485 #0477 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3105 #0477 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3105" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfL_AimedCon_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0485</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0487" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
-			<hkparam name="events" numelements="1">
+			<hkparam name="events" numelements="2">
 				<hkobject>
 					<hkparam name="id">42</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+				<hkobject>
+					<hkparam name="id">122</hkparam>
 					<hkparam name="payload">null</hkparam>
 				</hkobject>
 			</hkparam>
@@ -12836,12 +13245,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0499 #0497 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3104 #0497 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3104" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfL_AimedPreReady_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0499</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0502" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -12875,6 +13299,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5011" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">117</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0495" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -12882,7 +13317,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5011</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0502</hkparam>
 			<hkparam name="generator">#0496</hkparam>
@@ -13006,12 +13441,38 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0506 #0505 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3103 #0505 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3103" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfL_AimedReady_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0506</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5010" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">119</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0503" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -13019,7 +13480,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5010</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
 			<hkparam name="generator">#0504</hkparam>
@@ -13181,12 +13642,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0512 #0510 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3102 #0510 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3102" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfL_AimedPreCharge_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0512</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0515" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -13220,6 +13696,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5009" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">121</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0508" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -13227,7 +13714,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5009</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0515</hkparam>
 			<hkparam name="generator">#0509</hkparam>
@@ -13461,12 +13948,27 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0520 #0518 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3101 #0518 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3101" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfL_AimedRelease_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0520</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0523" class="hkbStateMachineTransitionInfoArray" signature="0xe397b11e">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -13500,6 +14002,17 @@
 			</hkparam>
 		</hkobject>
 
+		<hkobject name="#5008" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">120</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0516" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -13507,7 +14020,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5008</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">#0523</hkparam>
 			<hkparam name="generator">#0517</hkparam>
@@ -13591,12 +14104,38 @@
 			<!-- cloneState SERIALIZE_IGNORED -->
 			<!-- padNode SERIALIZE_IGNORED -->
 			<hkparam name="generators" numelements="12">
-				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #0468 #0526 #0150 #0150
+				#0150 #0150 #0150 #0150 #0150 #0150 #0150 #0150 #3100 #0526 #0150 #0150
 			</hkparam>
 			<hkparam name="selectedGeneratorIndex">0</hkparam>
 			<hkparam name="currentGeneratorIndex">0</hkparam>
 		</hkobject>
 
+		<hkobject name="#3100" class="hkbModifierGenerator" signature="0x1f81fae6">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="variableBindingSet">null</hkparam>
+			<!-- cachedBindables SERIALIZE_IGNORED -->
+			<!-- areBindablesCached SERIALIZE_IGNORED -->
+			<hkparam name="userData">1</hkparam>
+			<hkparam name="name">StfL_AimedCharge_MG</hkparam>
+			<!-- id SERIALIZE_IGNORED -->
+			<!-- cloneState SERIALIZE_IGNORED -->
+			<!-- padNode SERIALIZE_IGNORED -->
+			<hkparam name="modifier">#3001</hkparam>
+			<hkparam name="generator">#0468</hkparam>
+		</hkobject>
+		
+		<hkobject name="#5007" class="hkbStateMachineEventPropertyArray" signature="0xb07b4388">
+			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
+			<!-- referenceCount SERIALIZE_IGNORED -->
+			<hkparam name="events" numelements="1">
+				<hkobject>
+					<hkparam name="id">118</hkparam>
+					<hkparam name="payload">null</hkparam>
+				</hkobject>
+			</hkparam>
+		</hkobject>
+		
 		<hkobject name="#0524" class="hkbStateMachineStateInfo" signature="0xed7f9d0">
 			<!-- memSizeAndFlags SERIALIZE_IGNORED -->
 			<!-- referenceCount SERIALIZE_IGNORED -->
@@ -13604,7 +14143,7 @@
 			<!-- cachedBindables SERIALIZE_IGNORED -->
 			<!-- areBindablesCached SERIALIZE_IGNORED -->
 			<hkparam name="listeners" numelements="0"></hkparam>
-			<hkparam name="enterNotifyEvents">null</hkparam>
+			<hkparam name="enterNotifyEvents">#5007</hkparam>
 			<hkparam name="exitNotifyEvents">null</hkparam>
 			<hkparam name="transitions">null</hkparam>
 			<hkparam name="generator">#0525</hkparam>
