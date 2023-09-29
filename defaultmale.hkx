@@ -23,7 +23,7 @@
 			<!-- referenceCount SERIALIZE_IGNORED -->
 			<hkparam name="deformableSkinNames" numelements="0"></hkparam>
 			<hkparam name="rigidSkinNames" numelements="0"></hkparam>
-			<hkparam name="animationNames" numelements="1676">
+			<hkparam name="animationNames" numelements="1685">
 				<hkcstring>Animations\1HM_1stP_Run.hkx</hkcstring>
 				<hkcstring>Animations\1hm_1stP_Walk.hkx</hkcstring>
 				<hkcstring>Animations\1HM_AttackForwardSprint.hkx</hkcstring>
@@ -1700,6 +1700,15 @@
 				<hkcstring>Animations\Staffright_Unequip.hkx</hkcstring>
 				<hkcstring>Animations\StfMagicRight_preready.hkx</hkcstring>
 				<hkcstring>Animations\Mrh_preready.hkx</hkcstring>
+				<hkcstring>Animations\Summon_PreA.hkx</hkcstring>
+				<hkcstring>Animations\Summon_LoopA.hkx</hkcstring>
+				<hkcstring>Animations\Summon_ReleaseA.hkx</hkcstring>
+				<hkcstring>Animations\Stf_Focus.hkx</hkcstring>
+				<hkcstring>Animations\StfRight_Focus.hkx</hkcstring>
+				<hkcstring>Animations\Stf_FocusLoop.hkx</hkcstring>
+				<hkcstring>Animations\StfRight_FocusLoop.hkx</hkcstring>
+				<hkcstring>Animations\Stf_FocusIntro.hkx</hkcstring>
+				<hkcstring>Animations\StfRight_FocusIntro.hkx</hkcstring>
 			</hkparam>
 			<hkparam name="animationFilenames" numelements="0"></hkparam>
 			<hkparam name="characterPropertyNames" numelements="39">

@@ -8729,7 +8729,7 @@ FootBack:0.333333
 1
 0.4 0 0 0 1
 
-25073
+25082
 1
 19
 Behaviors\0_Master.hkx
@@ -34023,6 +34023,78 @@ VampireLordTransform
 SoundPlay:0.5
 SetRace:2
 
+SummonPreAnimation
+1676
+1
+0
+0
+1
+SummonPretoLoop:3
+
+SummonLoopAnimation
+1677
+1
+0
+0
+0
+
+SummonReleaseAnimation
+1678
+1
+0
+0
+4
+MRh_Equipped_Event:1
+MLh_Equipped_Event:1
+SummonWinOpen:3
+SummonWinClose:3
+
+Stf_FocusRelease
+1679
+1
+0
+0
+1
+MLh_Equipped_Event:3
+
+StfRight_FocusRelease
+1680
+1
+0
+0
+1
+MRh_Equipped_Event:3
+
+Stf_FocusLoop
+1681
+1
+0
+0
+0
+
+StfRight_FocusLoop
+1682
+1
+0
+0
+0
+
+Stf_FocusIntro
+1683
+1
+0
+0
+1
+LFocusIntroOut:3
+
+StfRight_FocusIntro
+1684
+1
+0
+0
+1
+RFocusIntroOut:3
+
 DLC01TrailerWalkForward
 623
 1
@@ -34032,7 +34104,7 @@ DLC01TrailerWalkForward
 AnimObjectUnequip:6.5
 IdleStop:8.66067
 
-12723
+12732
 100
 1.2
 1
@@ -46870,6 +46942,69 @@ IdleStop:8.66067
 1
 0.8 0 0 0 1
 
+1676
+1
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1677
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1678
+1
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1679
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1680
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1681
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1682
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1683
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1684
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
 1399
 0.8
 1
@@ -46877,7 +47012,7 @@ IdleStop:8.66067
 1
 0.8 0 0 0 1
 
-25064
+25073
 1
 19
 Behaviors\0_Master.hkx
@@ -72162,6 +72297,78 @@ VampireLordTransform
 SoundPlay:0.5
 SetRace:2
 
+SummonPreAnimation
+1676
+1
+0
+0
+1
+SummonPretoLoop:3
+
+SummonLoopAnimation
+1677
+1
+0
+0
+0
+
+SummonReleaseAnimation
+1678
+1
+0
+0
+4
+MRh_Equipped_Event:1
+MLh_Equipped_Event:1
+SummonWinOpen:3
+SummonWinClose:3
+
+Stf_FocusRelease
+1679
+1
+0
+0
+1
+MLh_Equipped_Event:3
+
+StfRight_FocusRelease
+1680
+1
+0
+0
+1
+MRh_Equipped_Event:3
+
+Stf_FocusLoop
+1681
+1
+0
+0
+0
+
+StfRight_FocusLoop
+1682
+1
+0
+0
+0
+
+Stf_FocusIntro
+1683
+1
+0
+0
+1
+LFocusIntroOut:3
+
+StfRight_FocusIntro
+1684
+1
+0
+0
+1
+RFocusIntroOut:3
+
 DLC01TrailerWalkForward
 623
 1
@@ -72171,7 +72378,7 @@ DLC01TrailerWalkForward
 AnimObjectUnequip:6.5
 IdleStop:8.66067
 
-12760
+12769
 100
 1.2
 1
@@ -85045,6 +85252,69 @@ IdleStop:8.66067
 0.8 -9.83202 -10.3217 0
 1
 0.8 0 0 0 1
+
+1676
+1
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1677
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1678
+1
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1679
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1680
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1681
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1682
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1683
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1684
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
 
 1399
 0.8
