@@ -24864,7 +24864,7 @@
 			<hkparam name="enable">true</hkparam>
 			<!-- padModifier SERIALIZE_IGNORED -->
 			<hkparam name="modifiers" numelements="3">
-				#0185 #0106 #8301
+				#0185 #0106 #3001
 			</hkparam>
 		</hkobject>
 		
