@@ -8729,7 +8729,7 @@ FootBack:0.333333
 1
 0.4 0 0 0 1
 
-25082
+25084
 1
 19
 Behaviors\0_Master.hkx
@@ -34095,6 +34095,22 @@ StfRight_FocusIntro
 1
 RFocusIntroOut:3
 
+StaffGripToStaff
+1685
+1
+0
+0
+1
+ToGripStaff:3
+
+StaffGripToMelee
+1686
+1
+0
+0
+1
+ToGripMelee:3
+
 DLC01TrailerWalkForward
 623
 1
@@ -34104,7 +34120,7 @@ DLC01TrailerWalkForward
 AnimObjectUnequip:6.5
 IdleStop:8.66067
 
-12732
+12734
 100
 1.2
 1
@@ -47005,6 +47021,20 @@ IdleStop:8.66067
 1
 0 0 0 0 1
 
+1685
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1686
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
 1399
 0.8
 1
@@ -47012,7 +47042,7 @@ IdleStop:8.66067
 1
 0.8 0 0 0 1
 
-25073
+25075
 1
 19
 Behaviors\0_Master.hkx
@@ -72369,6 +72399,22 @@ StfRight_FocusIntro
 1
 RFocusIntroOut:3
 
+StaffGripToStaff
+1685
+1
+0
+0
+1
+ToGripStaff:3
+
+StaffGripToMelee
+1686
+1
+0
+0
+1
+ToGripMelee:3
+
 DLC01TrailerWalkForward
 623
 1
@@ -72378,7 +72424,7 @@ DLC01TrailerWalkForward
 AnimObjectUnequip:6.5
 IdleStop:8.66067
 
-12769
+12771
 100
 1.2
 1
@@ -85310,6 +85356,20 @@ IdleStop:8.66067
 0 0 0 0 1
 
 1684
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1685
+3
+1
+0 0 0 0
+1
+0 0 0 0 1
+
+1686
 3
 1
 0 0 0 0
