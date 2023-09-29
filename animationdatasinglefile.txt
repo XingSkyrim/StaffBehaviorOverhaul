@@ -8729,7 +8729,7 @@ FootBack:0.333333
 1
 0.4 0 0 0 1
 
-25071
+25073
 1
 19
 Behaviors\0_Master.hkx
@@ -22954,6 +22954,14 @@ StfMagic_PreReady
 1
 MLh_PreAimedOut:0.333333
 
+StfMagicRight_PreReady
+1674
+1
+0
+0
+1
+MRh_PreAimedOut:0.333333
+
 MLh_PreReady
 952
 1
@@ -22961,6 +22969,14 @@ MLh_PreReady
 0
 1
 MLh_PreAimedOut:0.5
+
+MRh_PreReady
+1675
+1
+0
+0
+1
+MRh_PreAimedOut:0.5
 
 StfMagic_AimConLoop
 1546
@@ -34016,7 +34032,7 @@ DLC01TrailerWalkForward
 AnimObjectUnequip:6.5
 IdleStop:8.66067
 
-12721
+12723
 100
 1.2
 1
@@ -40933,6 +40949,13 @@ IdleStop:8.66067
 1
 0.5 0 0 0 1
 
+1675
+0.5
+1
+0.5 0 0 0
+1
+0.5 0 0 0 1
+
 953
 0.5
 1
@@ -45931,6 +45954,13 @@ IdleStop:8.66067
 1
 0.333333 0 0 0 1
 
+1674
+0.333333
+1
+0.333333 0 0 0
+1
+0.333333 0 0 0 1
+
 1551
 4.5
 1
@@ -46847,7 +46877,7 @@ IdleStop:8.66067
 1
 0.8 0 0 0 1
 
-25062
+25064
 1
 19
 Behaviors\0_Master.hkx
@@ -61063,6 +61093,22 @@ StfMagic_PreReady
 1
 MLh_PreAimedOut:0.333333
 
+StfMagicRight_PreReady
+1674
+1
+0
+0
+1
+MRh_PreAimedOut:0.333333
+
+MRh_PreReady
+1675
+1
+0
+0
+1
+MRh_PreAimedOut:0.5
+
 MLh_PreReady
 952
 1
@@ -72125,7 +72171,7 @@ DLC01TrailerWalkForward
 AnimObjectUnequip:6.5
 IdleStop:8.66067
 
-12758
+12760
 100
 1.2
 1
@@ -79123,6 +79169,13 @@ IdleStop:8.66067
 1
 0.5 0 0 0 1
 
+1675
+0.5
+1
+0.5 0 0 0
+1
+0.5 0 0 0 1
+
 953
 0.5
 1
@@ -84071,6 +84124,13 @@ IdleStop:8.66067
 0.5 0 0 0 1
 
 1550
+0.333333
+1
+0.333333 0 0 0
+1
+0.333333 0 0 0 1
+
+1674
 0.333333
 1
 0.333333 0 0 0
